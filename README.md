@@ -1,9 +1,9 @@
 
-# public_chunjae
+# chunjae
 지속성있는 내용 유지공간
 
 <a name='TOP'></a>
-### Table of Contents
+## Table of Contents
 
 * css[【↓】](#css)
 	- sass문법[(보기)](https://github.com/netfolder/public_chunjae/tree/master/sass) ing..
