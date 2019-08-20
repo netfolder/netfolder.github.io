@@ -1,6 +1,6 @@
-### [ < 홈으로](https://netfolder.github.io/#sample)
+[ < 뒤로](https://netfolder.github.io/#sample)
 
-## bxSlider
+##### bxSlider
 
 ```javascript
 //기본설정
