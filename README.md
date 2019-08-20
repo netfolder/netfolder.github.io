@@ -1,8 +1,4 @@
 
-# chunjae
-지속성있는 내용 유지공간
-
-
 # Table of Contents
 
 * css[【↓】](#css)
@@ -96,13 +92,13 @@
 <a name='sample'></a>
 ## rollingPlugin
 
-- bxSlider[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/bxSlider)
+- bxSlider[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/bxSlider)
 	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
 
-- slick[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/slick)
+- slick[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/slick)
 	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
 
-- swiper 3.x[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/swiper)
+- swiper 3.x[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/swiper)
 	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
 
 -----
@@ -113,7 +109,7 @@
 <a name='fixedNavigation'></a>
 ## 스크롤 텝메뉴 샘플 ( 반응형 대응 )
 
-- fixedNavigation[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/samplePage/fixedNavigation)[(미리보기)](https://netfolder.github.io/samplePage/fixedNavigation/)
+- fixedNavigation[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/samplePage/fixedNavigation)[(미리보기)](https://netfolder.github.io/samplePage/fixedNavigation/)
 
 -----
 
