@@ -743,7 +743,7 @@ small {
 nav {
     width: 270px;
     position: fixed;
-    top: 170px;
+    top: 185px;
     left: 50%;
     margin-left: -750px;
     text-align: right
