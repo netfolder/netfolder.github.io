@@ -2,12 +2,8 @@
 # chunjae
 지속성있는 내용 유지공간
 
-# css
-# px to vw calc
-# 좌우롤링
-# fixedNavigation
-# image
 
+## Table of Contents
 
 * css[【↓】](#css)
 	- sass문법[(보기)](https://github.com/netfolder/public_chunjae/tree/master/sass) ing..
@@ -24,7 +20,7 @@
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 <a name='css'></a>
-#### CSS
+## CSS
 - reset.css[(보기)](https://github.com/netfolder/study/blob/master/menu_content/submenu/css/default.css)
 - Airbnb CSS / Sass Styleguide 방법론[(보기)](https://github.com/airbnb/css#oocss-and-bem)
 - [IR기법(Image Replacement)](https://nuli.navercorp.com/sharing/blog/post/1132804) : 대체 텍스트 제공
@@ -42,7 +38,7 @@
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 <a name='image'></a>
-#### Image
+## Image
 
 | 종류 | PC web | Mobile Web |
 | :-------- | :-------- | :-------- |
@@ -68,7 +64,7 @@
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 <a name='comment'></a>
-#### Comment
+## Comment
 ```
 /*common*/ (x)
 /* common */ (o)  CSS 주석 기호( /*, */ )와 내용 사이에는 반드시 공백 한 칸이 있어야 한다.
@@ -98,7 +94,7 @@
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 <a name='sample'></a>
-#### 좌우롤링
+## 좌우롤링
 
 - bxSlider[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/bxSlider)
 	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
@@ -115,7 +111,7 @@
 
 
 <a name='fixedNavigation'></a>
-#### 스크롤 텝메뉴 샘플 ( 반응형 대응 )
+## 스크롤 텝메뉴 샘플 ( 반응형 대응 )
 
 - fixedNavigation[(샘플보기)](https://github.com/netfolder/public_chunjae/tree/master/samplePage/fixedNavigation)[(미리보기)](https://netfolder.github.io/samplePage/fixedNavigation/)
 
