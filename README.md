@@ -92,7 +92,7 @@
 <a name='sample'></a>
 ## rollingPlugin
 
-- bxSlider[(소스보기)](https://github.com/netfolder/netfolder.github.io/tree/master/bxSlider)
+- bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
 	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
 
 - slick[(소스보기)](https://github.com/netfolder/netfolder.github.io/tree/master/slick)
