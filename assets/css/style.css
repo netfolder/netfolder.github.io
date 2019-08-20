@@ -791,7 +791,8 @@ footer {
     margin-left: -650px;
     bottom: 20px;
     text-align: right;
-    line-height: 16px
+    line-height: 16px;
+	display: none;
 }
 
 @media print,
