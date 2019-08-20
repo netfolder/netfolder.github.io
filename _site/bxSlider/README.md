@@ -1,4 +1,4 @@
-### [ < 홈으로](https://netfolder.github.io/)
+### [ < 홈으로](https://netfolder.github.io/#sample)
 
 ## bxSlider
 

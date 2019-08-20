@@ -1,7 +1,7 @@
-### [ < 홈으로](https://github.com/netfolder/public_chunjae)
+### [ < 홈으로](https://netfolder.github.io/#sample)
 
 ## slick
-	
+
 ```javascript
 //기본설정
 $(".slick").slick({
@@ -18,12 +18,11 @@ $(".slick").slick({
 });
 ```
 <!--##### [옵션더보기 ↓](#option)-->
-	
+
  - type1[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/slick/html/slick_type1.html)
- 
+
  	![Alt text](images/type1.jpg)
-	
+
  - type2[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/slick/html/slick_type2.html)
- 
+
  	![Alt text](images/type2.jpg)
-	
