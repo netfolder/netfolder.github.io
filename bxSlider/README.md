@@ -21,96 +21,88 @@ slider1.bxSlider({
  	![Alt text](images/type1.jpg)
 
 
-
+#### link
 ``` html
-	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
-	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
-	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
+<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
+<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
+<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
+<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
+<script src="http://edu.tsherpa.co.kr/Scripts/jquery.bxslider.js"></script>
 ```
 
+#### css
 ``` css
-	#wrap {
-			position: relative;
-			
-		}
-		
-		/* 복사 */
-		.bxslider_type1{position: relative; width: 743px;}		
-		.bxslider_type1 > .bx-wrapper{  }
-		.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
-		.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
-		.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
-		.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
-		.bxslider_type1 .bx-wrapper .bx-controls{ position: absolute; bottom:0px; width:100%;text-align: center; z-index: 999}
-		.bxslider_type1 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
-		.bxslider_type1 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
-		.bxslider_type1 .bx-wrapper .bx-controls-auto{ display: inline-block;}
-		
-		.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
-		.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
-		.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
-		.btn_next{
-			right: 0;
-			background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
-		}
-		.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}		
+#wrap {
+	position: relative;
+}
+.bxslider_type1{position: relative; width: 743px;}		
+.bxslider_type1 > .bx-wrapper{  }
+.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
+.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
+.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
+.bxslider_type1 .bx-wrapper .bx-controls{ position: absolute; bottom:0px; width:100%;text-align: center; z-index: 999}
+.bxslider_type1 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
+.bxslider_type1 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
+.bxslider_type1 .bx-wrapper .bx-controls-auto{ display: inline-block;}
+.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
+.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
+.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
+.btn_next{
+	right: 0;
+	background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
+}
+.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}		
 ```
 
 ``` html
-	<div id="wrap">
-		<!-- 복사 -->
-		<div class="bxslider_type1 bx_slide_01">
-			<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
-			<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
-
-			<ul class="bxslider">
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-				<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			</ul>
-		</div>
+<div id="wrap">
+	<!-- 복사 -->
+	<div class="bxslider_type1 bx_slide_01">
+		<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
+		<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
+		<ul class="bxslider">
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+		</ul>
 	</div>
+</div>
 ```
 
-``` javascript
-	
-	$(document).ready(function() {
-
-		function BxSlider($selector , option){
-			var el = $selector;
-			$(el+' .bxslider').bxSlider({
-				auto: option.auto,
-				autoControls: option.autoControls,
-				mode: option.mode,
-				speed: option.speed,
-				pause: option.pause,						
-				autoControls: option.autoControls,
-				pager: option.pager,
-				controls:option.controls,
-				prevClass: el+' .btn_next',
-				nextClass: el+' .btn_pre'
-			});
-		}
-
-		var option_1 = {
-			auto: true,
-			autoControls: true,
-			mode: 'fade',
-			speed: 500,
-			pause: 1000,						
-			autoControls: true,
-			pager: true,
-			controls:false
-		}
-		var slider_01 = new BxSlider(".bx_slide_01" , option_1);
-		
-
-	});
-
+``` javascript	
+$(document).ready(function() {
+	function BxSlider($selector , option){
+		var el = $selector;
+		$(el+' .bxslider').bxSlider({
+			auto: option.auto,
+			autoControls: option.autoControls,
+			mode: option.mode,
+			speed: option.speed,
+			pause: option.pause,						
+			autoControls: option.autoControls,
+			pager: option.pager,
+			controls:option.controls,
+			prevClass: el+' .btn_next',
+			nextClass: el+' .btn_pre'
+		});
+	}
+	var option_1 = {
+		auto: true,
+		autoControls: true,
+		mode: 'fade',
+		speed: 500,
+		pause: 1000,						
+		autoControls: true,
+		pager: true,
+		controls:false
+	}
+	var slider_01 = new BxSlider(".bx_slide_01" , option_1);
+});
 ```
 
 
