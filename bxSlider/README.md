@@ -1,6 +1,6 @@
 [ < 뒤로](https://netfolder.github.io/#sample)
 
-##### bxSlider
+#### bxSlider
 
 ```javascript
 //기본설정
@@ -14,14 +14,14 @@ slider1.bxSlider({
 	controls:true     //좌우버튼보이기
 });
 ```
-## [옵션더보기 ↓](#option)
+#### [옵션더보기 ↓](#option)
 
-## type1[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
+#### type1[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
 
  	![Alt text](images/type1.jpg)
 
 
-## type2[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type2.html)
+#### type2[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type2.html)
 
  	![Alt text](images/type2.jpg)
 
@@ -32,7 +32,7 @@ slider1.bxSlider({
 
 
 
-## <a name='option'>option</a>
+#### <a name='option'>option</a>
 ```javascript
 
 /* 슬라이드의버튼 클래스 정의 : controls:false 설정 */
