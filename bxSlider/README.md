@@ -1,6 +1,6 @@
 [ < 뒤로](https://netfolder.github.io/#sample)
 
-#### bxSlider default
+#### bxSlider default [모든 옵션보기 ↓](#option)
 
 ```javascript
 //기본설정
@@ -14,9 +14,9 @@ slider1.bxSlider({
 	controls:true     //좌우버튼보이기
 });
 ```
-#### [옵션더보기 ↓](#option)
 
-#### type1[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
+
+### type1[ (전체 소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
 
  	![Alt text](images/type1.jpg)
 
@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 
 
-#### type2[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type2.html)
+### type2[ (소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type2.html)
 
  	![Alt text](images/type2.jpg)
 
