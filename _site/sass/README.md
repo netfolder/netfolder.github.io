@@ -1,4 +1,4 @@
-### [ < 홈으로](https://github.com/netfolder/public_chunjae)
+### [ < 홈으로](https://github.com/netfolder/netfolder.github.io#css)
 
 ## sass 문법
 
@@ -19,7 +19,7 @@
 
 * 속성 네스팅
 
-: font의 경우 font-family, font-size, font-weight 등이 주로 세트로 정의되는데, 
+: font의 경우 font-family, font-size, font-weight 등이 주로 세트로 정의되는데,
 다음과 같이 하나의 세트(?)인 속성들은 속성의 하위 사전 형태로 작성할 수 있다.
 
 ```css

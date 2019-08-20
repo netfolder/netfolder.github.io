@@ -2,7 +2,7 @@
 # Table of Contents
 
 * css[【↓】](#css)
-	- sass문법[(보기)](https://github.com/netfolder/public_chunjae/tree/master/sass) ing..
+	- sass문법[(보기)](https://github.com/netfolder/netfolder.github.io/tree/master/sass) ing..
 	- 일부 글꼴 크기가 Safari (iPhone)에서 더 크게 렌더링 이슈 해결법[【→】](https://demun.tistory.com/2402)
 * px to vw calc[【→】](https://pxtovw.dev-calc.space/)
 * comment[【↓】](#comment)
@@ -92,13 +92,13 @@
 <a name='sample'></a>
 ## rollingPlugin
 
-- bxSlider[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/bxSlider)
+- bxSlider[(소스보기)](https://github.com/netfolder/netfolder.github.io/tree/master/bxSlider)
 	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
 
-- slick[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/slick)
+- slick[(소스보기)](https://github.com/netfolder/netfolder.github.io/tree/master/slick)
 	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
 
-- swiper 3.x[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/swiper)
+- swiper 3.x[(소스보기)](https://github.com/netfolder/netfolder.github.io/tree/master/swiper)
 	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
 
 -----
