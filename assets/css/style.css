@@ -820,7 +820,7 @@ screen and (max-width: 1060px) {
     }
 
     #banner {
-      display: none;
+        display: none;
         width: 100%
     }
 
@@ -875,6 +875,7 @@ screen and (max-width: 720px) {
     }
 
     #banner {
+        display: none;
         top: 80px
     }
 
