@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>slick type1 templete</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+	<style>
+		*{padding:0; border: 0; margin:0;}
+		#wrap {position: relative; }
+		
+		
+		.slick_type1{width: 250px;}
+		.slick_type1 .slick-slide{}
+		.slick_type1 .slick-arrow{position: absolute; top:50%; margin-top:-22px;width: 45px; height: 44px; cursor: pointer;}
+		.slick_type1 .slick-arrow button{display: none !important;}
+		.slick_type1 .slick-prev.slick-arrow{left: 0px !important;  z-index: 10;font-size: 0; text-indent: -9999px; background: url(http://image.tsherpa.co.kr/middle/main/brd_arrow.png) no-repeat left top;}
+		.slick_type1 .slick-next.slick-arrow{right: 0px !important; font-size: 0; text-indent: -9999px; background: url(http://image.tsherpa.co.kr/middle/main/brd_arrow.png) no-repeat right top;}
+		.slick_type1 .slick-dots{position: absolute;bottom:-30px;display: block;width: 100%;padding: 0;margin: 0;list-style: none;text-align: center;}		
+		.slick_type1 .slick-dots li{width: 10px; height: 10px;padding: 0 5px;cursor: pointer;display: inline-block;background:url("http://image.tsherpa.co.kr/elementary/main/2019/btn_editng_dot_v2.png") no-repeat 0 0;}
+		.slick_type1 .slick-dots li.slick-active{background:url("http://image.tsherpa.co.kr/elementary/main/2019/btn_editng_dot_v2.png") no-repeat 0 -10px;}
+		.slick_type1 .slick-dots li button{display: none !important;}
+		.slick_type1 .slick-dots li button:focus{outline:none;}
+	
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- 복사 -->
+		
+		<div class="slick_type1">
+			<span id="count">0 / 0</span>
+			<ul class="regular slider">   
+				<li><img src="http://placehold.it/250x300?text=1"></li>
+				<li><img src="http://placehold.it/250x300?text=2"></li>
+				<li><img src="http://placehold.it/250x300?text=3"></li>
+				<li><img src="http://placehold.it/250x300?text=4"></li>
+				<li><img src="http://placehold.it/250x300?text=5"></li>
+				<li><img src="http://placehold.it/250x300?text=6"></li>
+				<li><img src="http://placehold.it/250x300?text=7"></li>
+				<li><img src="http://placehold.it/250x300?text=8"></li>
+			</ul>
+		</div>
+		<!-- //복사 -->
+		<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+		<script>
+			
+			var slickColumnsTotal = $('.slick_type1 .regular li').length;
+			var pagePerView = 1;/* 화면에 보이는계수 */
+			var slickA = $(".slick_type1 .regular").slick({
+				autoplay : false,
+				dots: true,
+				speed : 500 /* 이미지가 슬라이딩시 걸리는 시간 */,
+				arrows :true, /* 좌우 방향 버튼 */
+				infinite: true,
+				autoplaySpeed: 3000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+				arrows: true,
+				slidesToShow: pagePerView, /* 화면에 보이는계수 */
+				slidesToScroll: 1, /* 한번에 몇개씩 이동할지 */
+				fade: false
+			});
+	
+			$('.slick_type1 .regular').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				/*
+					currentSlide : 현제 번호
+					nextSlide : 다음 번호
+				*/				
+				$("#count").html( (nextSlide+1)  + " / " + slickColumnsTotal)
+			});
+			$("#count").html( 1 + " / " + slickColumnsTotal)
+			
+			
+		</script>
+	</div>
+</body>
+</html>
