@@ -743,7 +743,7 @@ small {
 nav {
     width: 270px;
     position: fixed;
-    top: 185px;
+    top: 200px;
     left: 50%;
     margin-left: -750px;
     text-align: right
@@ -781,7 +781,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-    color: #999
+    color: #333
 }
 
 footer {
