@@ -1,5 +1,7 @@
 [ < 뒤로](https://netfolder.github.io/#sample)
+
 ### bxSlider option [모든 옵션보기 ↓](#option)
+
 <br>
 
 
@@ -100,7 +102,7 @@ $(document).ready(function() {
 });
 ```
 
-
+<br>
 
 
 ### type2[ (전체 소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type2.html)
