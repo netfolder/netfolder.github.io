@@ -522,7 +522,7 @@ strong {
 }
 
 .wrapper {
-    width: 650px;
+    width: 900px;
     margin: 0 auto;
     position: relative
 }
@@ -723,7 +723,7 @@ header p {
 }
 
 section {
-    width: 590px;
+    width:890px;
     padding: 30px 30px 50px 30px;
     margin: 20px 0;
     margin-top: 190px;
@@ -739,11 +739,11 @@ small {
 }
 
 nav {
-    width: 230px;
+    width: 270px;
     position: fixed;
     top: 220px;
     left: 50%;
-    margin-left: -580px;
+    margin-left: -750px;
     text-align: right
 }
 
@@ -784,7 +784,7 @@ footer {
     width: 180px;
     position: fixed;
     left: 50%;
-    margin-left: -530px;
+    margin-left: -740px;
     bottom: 20px;
     text-align: right;
     line-height: 16px
@@ -818,6 +818,7 @@ screen and (max-width: 1060px) {
     }
 
     #banner {
+      display: none;
         width: 100%
     }
 
