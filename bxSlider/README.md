@@ -1,21 +1,5 @@
 [ < 뒤로](https://netfolder.github.io/#sample)
 
-#### bxSlider default [모든 옵션보기 ↓](#option)
-
-```javascript
-//기본설정
-var slider1=$('.slider1');
-slider1.bxSlider({            
-	maxSliders:1,    //슬라이드개수
-	auto:true,          //자동실행
-	mveSliders:1,    //슬라이드 이동 개수       
-	slideWidth:650,  //슬라이드 가로폭
-	pager:false,       //하단 도트버튼숨기기
-	controls:true     //좌우버튼보이기
-});
-```
-
-
 
 
 ### type1[ (전체 소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
