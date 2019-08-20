@@ -1,11 +1,17 @@
 [ < 뒤로](https://netfolder.github.io/#sample)
+### bxSlider option [모든 옵션보기 ↓](#option)
+<br>
 
-#### bxSlider option [모든 옵션보기 ↓](#option)
+
+
 
 
 ### type1[ (전체 소스보기) ](https://github.com/netfolder/public_chunjae/blob/master/bxSlider/html/bxslider_type1.html)
 
  	![Alt text](images/type1.jpg)
+	
+	
+	
 
 
 #### Include
