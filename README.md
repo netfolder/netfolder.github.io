@@ -51,7 +51,7 @@
 
 
 <a name='fixedNavigation'></a>
-## 스크롤 텝메뉴 샘플 ( 반응형 대응 )
+## fixedNavigation ( responsive )
 
 - fixedNavigation[(소스보기)](https://netfolder.github.io/samplePage/)
 
