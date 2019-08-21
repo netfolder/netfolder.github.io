@@ -109,7 +109,7 @@
 <a name='fixedNavigation'></a>
 ## 스크롤 텝메뉴 샘플 ( 반응형 대응 )
 
-- fixedNavigation[(소스보기)](https://github.com/netfolder/public_chunjae/tree/master/samplePage/fixedNavigation)[(미리보기)](https://netfolder.github.io/samplePage/fixedNavigation/)
+- fixedNavigation[(소스보기)](https://netfolder.github.io/samplePage/)[(미리보기)](https://netfolder.github.io/samplePage/fixedNavigation/)
 
 -----
 
