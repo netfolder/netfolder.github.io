@@ -114,28 +114,3 @@
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
-
-
-<a name='sample'></a>
-## rollingPlugin
-
-- bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
-	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
-
-- slick[(소스보기)](https://netfolder.github.io/slick)
-	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
-
-- swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
-	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
-
------
-<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
-
-
-<a name='fixedNavigation'></a>
-## 스크롤 텝메뉴 샘플 ( 반응형 대응 )
-
-- fixedNavigation[(소스보기)](https://netfolder.github.io/samplePage/)
-
------
-<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
