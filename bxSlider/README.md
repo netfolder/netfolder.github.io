@@ -8,95 +8,154 @@
  	![Alt text](images/type1.jpg)
 
 
-#### Include
-``` html
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
-<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
-<script src="http://edu.tsherpa.co.kr/Scripts/jquery.bxslider.js"></script>
-```
-
-#### css
-``` css
-#wrap {
-	position: relative;
-}
-.bxslider_type1{position: relative; width: 743px;}		
-.bxslider_type1 > .bx-wrapper{  }
-.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
-.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
-.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
-.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
-.bxslider_type1 .bx-wrapper .bx-controls{ position: absolute; bottom:0px; width:100%;text-align: center; z-index: 999}
-.bxslider_type1 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
-.bxslider_type1 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
-.bxslider_type1 .bx-wrapper .bx-controls-auto{ display: inline-block;}
-.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
-.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
-.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
-.btn_next{
-	right: 0;
-	background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
-}
-.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}		
-```
 
 #### html
 ``` html
-<div id="wrap">
-	<!-- 복사 -->
-	<div class="bxslider_type1 bx_slide_01">
-		<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
-		<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
-		<ul class="bxslider">
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-			<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
-		</ul>
-	</div>	
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>bxSlider type1 templete</title>
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
+	<!--	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">-->
+	<style>
+		#wrap {
+			position: relative;
+		}
+		/* 복사 */
+		.bxslider_type1{position: relative; width: 743px;}		
+		.bxslider_type1 > .bx-wrapper{  }
+		.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
+		.bxslider_type1 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+		.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
+		.bxslider_type1 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
+		.bxslider_type1 .bx-wrapper .bx-controls{ position: absolute; bottom:0px; width:100%;text-align: center; z-index: 999}
+		.bxslider_type1 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
+		.bxslider_type1 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
+		.bxslider_type1 .bx-wrapper .bx-controls-auto{ display: inline-block;}
+		.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
+		.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
+		.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
+		.btn_next{
+			right: 0;
+			background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
+		}
+		.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}
+		/* // */
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- 복사 -->
+		<div class="bxslider_type1 bx_slide_01">
+				<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
+				<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
+				<ul class="bxslider">
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+				</ul>
+		</div>
+		<div class="bxslider_type1 bx_slide_02">
+				<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
+				<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
+				<ul class="bxslider">
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+				</ul>
+		</div>
+		<div class="bxslider_type1 bx_slide_03">
+				<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
+				<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
+				<ul class="bxslider">
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+					<li><img src="http://www.coding1.merix.co.kr/images/main/vi01.jpg" alt=""></li>
+				</ul>
+		</div>
+		<!-- //복사 -->
+		<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
+		<script src="http://edu.tsherpa.co.kr/Scripts/jquery.bxslider.js"></script>
+		<script>
+			/* 복사 */
+			$(document).ready(function() {
+				function BxSlider($selector , option){
+					var el = $selector;
+					$(el+' .bxslider').bxSlider({
+						auto: option.auto,
+						autoControls: option.autoControls,
+						mode: option.mode,
+						speed: option.speed,
+						pause: option.pause,						
+						autoControls: option.autoControls,
+						pager: option.pager,
+						controls:option.controls,
+						prevClass: el+' .btn_next',
+						nextClass: el+' .btn_pre'
+					});
+				}
+				/* 1번째 배너 */
+				var option_1 = {
+					auto: true,
+					autoControls: true,
+					mode: 'fade',
+					speed: 500,
+					pause: 1000,						
+					autoControls: true,
+					pager: true,
+					controls:false
+				}
+				var slider_01 = new BxSlider(".bx_slide_01" , option_1);
+				/* 1번째 배너 끝 */
+				/* 2번째 배너 */
+				var option_2 = {
+					auto: true,
+					autoControls: true,
+					mode: 'vertical',
+					speed: 500,
+					pause: 2000,						
+					autoControls: true,
+					pager: true,
+					controls:false
+				}
+				var slider_02 = new BxSlider(".bx_slide_02" ,option_2);
+				/* 2번째 배너 끝 */
+				/* 3번째 배너 */
+				var option_3 = {
+					auto: true,
+					autoControls: true,
+					speed: 500,
+					pause: 3000,						
+					autoControls: true,
+					pager: true,
+					controls:false
+				}
+				var slider_03 = new BxSlider(".bx_slide_03" ,option_3);
+				/* 3번째 배너 끝 */
+			});
+			/* //복사 */
+		</script>
+	</div>
+</body>
+</html>
 ```
 
-#### script
-``` javascript	
-$(document).ready(function() {
-	function BxSlider($selector , option){
-		var el = $selector;
-		$(el+' .bxslider').bxSlider({
-			auto: option.auto,
-			autoControls: option.autoControls,
-			mode: option.mode,
-			speed: option.speed,
-			pause: option.pause,						
-			autoControls: option.autoControls,
-			pager: option.pager,
-			controls:option.controls,
-			prevClass: el+' .btn_next',
-			nextClass: el+' .btn_pre'
-		});
-	}
-	/* 1번째 배너 */
-	var option_1 = {
-		auto: true,
-		autoControls: true,
-		mode: 'fade',
-		speed: 500,
-		pause: 1000,						
-		autoControls: true,
-		pager: true,
-		controls:false
-	}
-	var slider_01 = new BxSlider(".bx_slide_01" , option_1);
-	/* 1번째 배너 끝 */
-	
-});
 
-```
 
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 <br>
@@ -107,93 +166,101 @@ $(document).ready(function() {
  	![Alt text](images/type2.jpg)
 
 
-#### Include
-``` html
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
-<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
-<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
-<script src="http://edu.tsherpa.co.kr/Scripts/jquery.bxslider.js"></script>
-```
-
-#### css
-``` css
-#wrap {
-	position: relative;
-	background-color: beige
-}
-/* 복사 */
-.bxslider_type2{position: relative; width: 980px;}		
-.bxslider_type2 .bx-wrapper{ width: 980px; max-width:none; }
-.bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
-.bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
-.bxslider_type2 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
-.bxslider_type2 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
-.bxslider_type2 .bx-wrapper .bx-controls{ position: absolute; top:350px; width:100%;text-align: center;}
-.bxslider_type2 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
-.bxslider_type2 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
-.bxslider_type2 .bx-wrapper .bx-controls-auto{ display: inline-block;}
-.bxslider_type2 > ul > li {}
-.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
-.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
-.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
-.btn_next{
-	right: 0;
-	background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
-}
-.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}	
-```
 
 #### html
 ``` html
-<div id="wrap">
-	<div class="bxslider_type2">
-		<span id="count">1/2</span>
-		<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
-		<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
-		<ul class="bxslider">
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
-
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
-			<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
-		</ul>
-	</div>
-</div>
-```
-
-#### script
-``` javascript	
-$(document).ready(function() {				
-	var slidePerView = 4; //1페이지에 보이는 요소개수
-	slider = $('.bxslider_type2 .bxslider').bxSlider({
-		minSlides: 2,
-		maxSlides: slidePerView,
-		auto: true,
-		autoControls: true,
-		slideMargin: 20,
-		speed: 500,
-		pause: 3500,
-		slideWidth:230,
-		/*mode: 'fade',*/
-		autoControls: true,
-		pager: true,
-		controls:false,
-		prevClass: ".btn_next",
-	    nextClass: ".btn_pre",
-		onSlideAfter : function(){
-			 //$('.slide-number').text((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount());   
-			//console.log((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount()/4);
-			$("#count").html((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount()/slidePerView)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>bxSlider type2 templete</title>
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/base.css">
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/common.css">
+	<link rel="stylesheet" href="http://edu.tsherpa.co.kr/Content/css/slick.css">
+	<!--	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">-->
+	<style>
+		#wrap {
+			position: relative;
+			background-color: beige
 		}
-	});
-	$("#count").html(1+'/'+slider.getSlideCount()/slidePerView)
-});
+		/* 복사 */
+		.bxslider_type2{position: relative; width: 980px;}		
+		.bxslider_type2 .bx-wrapper{ width: 980px; max-width:none; }
+		.bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a.active, .bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a:focus {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_on.png) no-repeat center top;}
+		.bxslider_type2 .bx-wrapper .bx-pager.bx-default-pager a {background:url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_off.png) no-repeat center top;text-indent: -9999px;display: block;width: 10px;height: 10px;margin: 0 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+		.bxslider_type2 .bx-wrapper .bx-controls-auto .bx-start {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_play.png) 0 0 no-repeat;margin: 0 3px;}
+		.bxslider_type2 .bx-wrapper .bx-controls-auto .bx-stop {display: block;text-indent: -9999px;width: 6px;height: 10px;background: url(http://edu.design.tsherpa.co.kr/Content/image/main/ico_stop.png) 0 0 no-repeat;margin: 0 3px;}
+		.bxslider_type2 .bx-wrapper .bx-controls{ position: absolute; top:350px; width:100%;text-align: center;}
+		.bxslider_type2 .bx-wrapper .bx-pager{ text-align: center; display: inline-block;}
+		.bxslider_type2 .bx-wrapper .bx-pager .bx-pager-item{ display: inline-block;}
+		.bxslider_type2 .bx-wrapper .bx-controls-auto{ display: inline-block;}
+		.bxslider_type2 > ul > li {}
+		.btns{position: absolute; width: 27px; height: 27px; display: block; z-index: 100; top:50%; margin-top:-13px;}
+		.btn_pre{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre.gif) no-repeat;}
+		.btn_pre:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_pre_off.gif) no-repeat;}
+		.btn_next{
+			right: 0;
+			background:url(http://edu.tsherpa.co.kr/content/image/main/page_next.gif) no-repeat;
+		}
+		.btn_next:hover{background:url(http://edu.tsherpa.co.kr/content/image/main/page_next_off.gif) no-repeat;}
+		/* // */
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- 복사 -->
+		<div class="bxslider_type2">
+				<span id="count">1/2</span>
+				<a href="javascript:void(0);" class="btns btn_pre" title="이전"></a>
+				<a href="javascript:void(0);" class="btns btn_next" title="다음"></a>
+				<ul class="bxslider">
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190319145527/Banner/20190319145525357.png" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
+					<li><img src="http://edu.tsherpa.co.kr/Files/20190328083428/Banner/20190328083402780.jpg" width="230" height="370" alt=""></li>
+				</ul>
+		</div>
+		<!-- //복사 -->
+		<script src="http://edu.tsherpa.co.kr/Scripts/jquery-1.12.4.min.js"></script>
+		<script src="http://edu.tsherpa.co.kr/Scripts/jquery.bxslider.js"></script>
+		<script>
+			/* 복사 */
+			$(document).ready(function() {
+				var slidePerView = 4; //1페이지에 보이는 요소개수
+				slider = $('.bxslider_type2 .bxslider').bxSlider({
+					minSlides: 2,
+   				maxSlides: slidePerView,
+					auto: true,
+					autoControls: true,
+					slideMargin: 20,
+					speed: 500,
+					pause: 3500,
+					slideWidth:230,
+					/*mode: 'fade',*/
+					autoControls: true,
+					pager: true,
+					controls:false,
+					prevClass: ".btn_next",
+          			nextClass: ".btn_pre",
+					onSlideAfter : function(){
+						 //$('.slide-number').text((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount());   
+						//console.log((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount()/4);
+						$("#count").html((slider.getCurrentSlide()+1)+'/'+slider.getSlideCount()/slidePerView)
+					}
+				});
+				$("#count").html(1+'/'+slider.getSlideCount()/slidePerView)
+			});
+			/* //복사 */
+		</script>
+	</div>
+</body>
+</html>
 ```
+
 
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
