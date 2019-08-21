@@ -51,6 +51,19 @@
 			<li><img src="http://placehold.it/250x300?text=7"></li>
 			<li><img src="http://placehold.it/250x300?text=8"></li>
 		</ul>
+	</div>	
+	<div class="slick_type1 slick_slide_02">
+		<span id="count">0 / 0</span>
+		<ul class="regular slider">   
+			<li><img src="http://placehold.it/250x300?text=1"></li>
+			<li><img src="http://placehold.it/250x300?text=2"></li>
+			<li><img src="http://placehold.it/250x300?text=3"></li>
+			<li><img src="http://placehold.it/250x300?text=4"></li>
+			<li><img src="http://placehold.it/250x300?text=5"></li>
+			<li><img src="http://placehold.it/250x300?text=6"></li>
+			<li><img src="http://placehold.it/250x300?text=7"></li>
+			<li><img src="http://placehold.it/250x300?text=8"></li>
+		</ul>
 	</div>
 </div>
 ```
@@ -114,6 +127,21 @@ var option_1 = {
 }
 var slick_01 = new SlickSlider(".slick_slide_01" , option_1);
 /* 1번째 배너 끝 */
+/* 2번째 배너 */
+var option_2 = {
+	autoplay : false,
+	dots: true,
+	speed : 500,
+	arrows :true,
+	infinite: true,
+	autoplaySpeed: 3000,
+	arrows: true,
+	slidesToShow: 2, /* 화면에 보이는계수 */
+	slidesToScroll: 1, 
+	fade: false
+}
+var slick_02 = new SlickSlider(".slick_slide_02" , option_2);
+/* 2번째 배너 끝 */
 ```
 
 
