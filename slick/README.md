@@ -144,7 +144,7 @@ var slick_02 = new SlickSlider(".slick_slide_02" , option_2);
 /* 2번째 배너 끝 */
 ```
 
-
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 	
 	
@@ -226,3 +226,5 @@ $('.slick_type1 .regular').on('beforeChange', function(event, slick, currentSlid
 $("#count").html( 1 + " / " + slickColumnsTotal)
 /* 1번째 배너 끝 */
 ```
+
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>

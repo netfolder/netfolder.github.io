@@ -98,6 +98,7 @@ $(document).ready(function() {
 
 ```
 
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 <br>
 
 
@@ -194,7 +195,7 @@ $(document).ready(function() {
 });
 ```
 
-
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 
 
@@ -282,7 +283,6 @@ maxSlides: 1,
 slideWidth: 0,
 // option : 정수
 
-
-
-
 ```
+
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
