@@ -3,7 +3,7 @@
 #### swiper 3.x
 
 
-### https://github.com/nolimits4web/Swiper/blob/Swiper3/API.md 3.x 버젼 사용
+#### https://github.com/nolimits4web/Swiper/blob/Swiper3/API.md 3.x 버젼 사용
 
 
 ### type1[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper.html)
@@ -92,6 +92,8 @@ var swiper01 = new Swiper('#p_header .slider_wrap .swiper-container', {
 
 
 ### type2[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper_01.html)
+
+#### [ (미리보기) ](http://pagelab.coding1.chunjae.co.kr/event/event_190813.html)
 
  	![Alt text](images/img02.png)
 
