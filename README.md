@@ -28,6 +28,13 @@
 /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
 .ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
 ```
+- CSS3 calc
+``` css
+height : 100%; /* 구식 브라우저를 위한 대비책(fallback) */
+height : -webkit-calc(100% - 1px); /* for Chrome, Safari */
+height :    -moz-calc(100% - 1px); /* for Firefox */
+height :         calc(100% - 1px); /* for IE */
+```
 
 -----
 
