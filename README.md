@@ -20,7 +20,7 @@
 - reset.css[(보기)](https://github.com/netfolder/study/blob/master/menu_content/submenu/css/default.css)
 - Airbnb CSS / Sass Styleguide 방법론[(보기)](https://github.com/airbnb/css#oocss-and-bem)
 - [IR기법(Image Replacement)](https://nuli.navercorp.com/sharing/blog/post/1132804) : 대체 텍스트 제공
-```csharp
+``` css
 /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
 .ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;}
 /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
