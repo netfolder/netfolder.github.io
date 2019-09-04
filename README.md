@@ -9,7 +9,7 @@
 * rollingPlugin[【↓】](#sample)
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
 * image 사용법[【↓】](#image)
-
+* youtobe 이것저것[【↓】](#youtobe)
 
 -----
 
@@ -87,6 +87,19 @@ height :         calc(100% - 1px); /* for IE */
 	* 3G망을 이용하는 유저를 고려하여 용량 축소가 중요하다.
 	* PNG-8 포맷을 기본으로 저장하며, 색상 수가 많거나 반투명 효과가 있으면 PNG-24를 사용한다.
 	* 용량 대비 이미지 품질을 고려하여 포맷을 변경할 수도 있다.
+
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+
+<a name='youtobe'></a>
+## youtobe[(api)](https://developers.google.com/youtube/player_parameters#controls)
+
+``` html
+//반복재생
+http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
+```
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
