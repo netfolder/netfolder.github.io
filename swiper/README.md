@@ -450,7 +450,7 @@
 <br>
 
 
-### type3[ (가로100% 텝메뉴 연계) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/w_rolling_01.html)
+### type4[ (가로100% 텝메뉴 연계) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/w_rolling_01.html)
 
 #### [ (미리보기) ](https://netfolder.github.io/swiper/html/w_rolling_01.html)
 
