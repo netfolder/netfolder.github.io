@@ -447,3 +447,185 @@
 ```
 
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+<br>
+
+
+### type3[ (가로100% 텝메뉴 연계) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/w_rolling_01.html)
+
+#### [ (미리보기) ](https://netfolder.github.io/swiper/html/w_rolling_01.html)
+
+ 	![Alt text](images/img04.png)
+
+
+
+#### html
+``` html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>swiper 3.2.7</title>
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1, user-scalable=no" />
+	<meta http-equiv="cleartype" content="on"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.7/css/swiper.css">
+	<style type="text/css">
+		/* 반영시 해당코드는 복붙 안해도됨  */
+		*{padding:0;margin: 0;}
+		/* //반영시 해당코드는 복붙 안해도됨  */
+
+		/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+		.ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
+		.inner{width:900px; margin: 0 auto;}	
+	
+		/* 컨텐츠 코드 */
+		.con01{margin:0 padding:0; position:relative; width:100%;}		
+		.con01 img{width:100%; border:0; vertical-align: top;}
+		.con01 .slider_wrap{position:relative; width: 100%;  margin: 0 auto; overflow:hidden;background:#fff;}
+		.con01 .swiper-container {overflow:hidden;position:relative}
+		.con01 .swiper-wrapper {width:100%;height:100%; }
+		.con01 .swiper-slide {overflow:hidden;position:relative;height:500px;background-repeat: no-repeat; background-position: center top;}
+		.con01 .swiper-pagination{width:100%;text-align:center;position:absolute;left:0;bottom:5%; display: none}
+		.con01 .swiper-pagination-bullet{width:6px;height:6px;margin:0 5px;background:#000;border:2px #000 solid;border-radius:100%;opacity:1}
+		.con01 .swiper-pagination-bullet-active{border:2px #000 solid;opacity:1;background:transparent}
+		.con01 .swiper-button-prev{opacity:0.8;width:40px;height:40px;border-radius: 50%; z-index:10;top:50%;background-color:#000;background-size:30px 20px;margin-top:-20px;left:0; left:50%; margin-left:-750px; transition: all 0.45s ease;}
+		.con01 .swiper-button-prev:hover{opacity:0.3;}
+		.con01 .swiper-button-next{opacity:0.8;width:40px;height:40px;border-radius: 50%;  z-index:10;top:50%;background-color:#000;background-size:30px 20px;margin-top:-20px;right:50%; margin-right:-750px;transition: all 0.45s ease;}
+		.con01 .swiper-button-next:hover{opacity:0.3;}
+		.con01 .swiper-button-next.swiper-button-disabled{opacity:0.2;}
+		.con01 .swiper-button-prev.swiper-button-disabled{opacity:0.2;}
+		
+		
+		.menu{overflow:hidden; position: absolute; z-index: 100; bottom:0;}
+		.menu li{list-style:none;float: left; box-sizing: border-box; text-align: center; background: rgba(0,0,0,0.1);}
+		.menu li.on a{background: rgba(0,0,0,0.3);}
+		.menu li a{display: block; width:300px; height:50px; line-height: 50px; font-size: 15px; text-decoration: none; color:#000; font-weight: bold;}
+
+
+	</style>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.7/js/swiper.min.js"></script>
+</head>
+<body>
+	
+	<div class="con01">
+		<div class="slider_wrap">
+			<div class="inner">
+				<ul class="menu">
+					<li><a href="javascript:;">메뉴1</a></li>
+					<li><a href="javascript:;">메뉴2</a></li>
+					<li><a href="javascript:;">메뉴3</a></li>
+				</ul>
+			</div>
+			
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--  -->
+					<div class="swiper-slide" style="background-image:url(../images/vis_01.jpg);">
+						
+							<span class="ir_su">
+								LED 바닥형 보행신호등
+
+								LED 바닥형 보행신호등은
+								신호등과 연동한 LED 바닥형 보행신 호등이 추가됨으로서,
+								정확한 신호역할 및 보행자로 하여금 심리적 저지선으로 느끼게 하여,
+								무단횡단을 사전에 방지하는 등 보행자를 위한 
+								새로운 개념의 횡단보도 안전시설물입니다.
+							</span>
+							<a class="con_btn bt01" href="http://www.naver.com" target="_blank"><span class="ir_su">VIEW MORE</span></a>
+						
+					</div>
+					<div class="swiper-slide" style="background-image:url(../images/vis_02.jpg);">
+						<span class="ir_su">
+							단열재
+
+							국내·외 유수의 제조원들과 계약을 통해 복잡 다단한 유통경로를 단일화시키고, 
+							체계적인 유통 시스템 및 영업망을 구축하여 제조사(Manufacturer)에게는 
+							판로 확장과 함께 생산 및 연구 개발에만 전념 할 수 있는 제조 환경을, 
+							최종 소비자(End user) 에게는 좋은 상품을 합리적인 비용으로 구매 할 수 있는 
+							구매 환경을 제공하고 있습니다.
+						</span>
+						<a class="con_btn bt02" href="http://www.daum.net" target="_blank"><span class="ir_su">VIEW MORE</span></a>
+					</div>
+					<div class="swiper-slide" style="background-image:url(../images/vis_03.jpg);">
+						<span class="ir_su">
+							공기정화기
+
+							LED 바닥형 보행신호등은
+							신호등과 연동한 LED 바닥형 보행신 호등이 추가됨으로서,
+							정확한 신호역할 및 보행자로 하여금 심리적 저지선으로 느끼게 하여,
+							무단횡단을 사전에 방지하는 등 보행자를 위한 
+							새로운 개념의 횡단보도 안전시설물입니다.
+						</span>
+						<a class="con_btn bt03" href="http://www.google.com" target="_blank"><span class="ir_su">VIEW MORE</span></a>
+					</div>
+					
+					
+					<!-- // -->
+				</div>
+			</div>
+			<!-- Add Arrows -->
+			
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<script>
+
+			function getSlideDataIndex(swipe){
+				var activeIndex = swipe.activeIndex;
+				var slidesLen = swipe.slides.length;
+				if(swipe.params.loop){
+					switch(swipe.activeIndex){
+						case 0:
+							activeIndex = slidesLen-3;
+							break;
+						case slidesLen-1:
+							activeIndex = 0;
+							break;
+						default:
+							--activeIndex;
+					}
+				}
+				return  activeIndex;
+			}
+			var swiper01 = new Swiper('.con01 .slider_wrap .swiper-container', {
+				autoplay : 2000, // 4.5초마다 롤링 , 롤링 안할시 false 값 
+				nextButton: '.con01 .swiper-button-next',
+				prevButton: '.con01 .swiper-button-prev',
+				pagination: '.con01 .swiper-pagination',
+				paginationClickable: true,
+				loop: false,
+				autoHeight: true,
+				spaceBetween: 0,
+				onSlideChangeEnd : function(event){
+              		var num = getSlideDataIndex(event)
+					selectMenu(num)
+
+					console.log(num)
+				}
+			});
+
+			function selectMenu(n){
+				$(".menu li").eq(n).addClass("on").siblings().removeClass('on')
+				
+			}
+
+
+			$(".menu li>a").each(function(index){
+				var $this = $(this)
+				$this.click(function(){
+					selectMenu(index)
+					swiper01.slideTo(index)
+				})
+			});
+
+
+		</script>
+	</div>
+</body>
+</html>
+```
+
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+<br>
