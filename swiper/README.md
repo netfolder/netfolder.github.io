@@ -2,10 +2,7 @@
 <br>
 #### swiper 3.x
 
-
-#### https://github.com/nolimits4web/Swiper/blob/Swiper3/API.md 3.x 버젼 사용
-
-#### [ (적용 미리보기1) ](http://e.coding.tsherpa.co.kr/event/event_190826.html)
+#### [ (swiper 3.x api) ](https://github.com/nolimits4web/Swiper/blob/Swiper3/API.md)
 
 ### type1[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper.html)
 
