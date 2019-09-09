@@ -4,7 +4,7 @@
 
 #### [ (swiper 3.x api) ](https://github.com/nolimits4web/Swiper/blob/Swiper3/API.md)
 
-### type1[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper.html)
+### type1[ (기본 롤링) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper.html)
 
  	![Alt text](images/img01.png)
 
@@ -100,7 +100,7 @@
 <br>
 
 
-### type2[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper_01.html)
+### type2[ (모바일 텝 활성화) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/m_swiper_01.html)
 
 #### [ (미리보기) ](http://pagelab.coding1.chunjae.co.kr/event/event_190813.html)
 
@@ -240,7 +240,7 @@
 <br>
 
 
-### type3[ (전체 소스보기) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/w_rolling.html)
+### type3[ (가로100%) ](https://github.com/netfolder/netfolder.github.io/blob/master/swiper/html/w_rolling.html)
 
 #### [ (미리보기) ](https://netfolder.github.io/swiper/html/w_rolling.html)
 
