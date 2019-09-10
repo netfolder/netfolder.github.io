@@ -741,18 +741,18 @@ small {
 }
 
 nav {
-    width: 270px;
+    width: 350px;
     position: fixed;
     top: 200px;
     left: 50%;
-    margin-left: -750px;
+    margin-left: -840px;
     text-align: right
 }
 
 nav ul {
     list-style: none;
     list-style-image: none;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 24px
 }
 
