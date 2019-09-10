@@ -174,7 +174,7 @@ ul {
 
 nav ul,
 nav ol {
-    list-style: none;
+    /* list-style: none; */
     list-style-image: none
 }
 
@@ -745,12 +745,12 @@ nav {
     position: fixed;
     top: 200px;
     left: 50%;
-    margin-left: -840px;
+    margin-left: -767px;
     text-align: right
 }
 
 nav ul {
-    list-style: none;
+    /* list-style: none; */
     list-style-image: none;
     font-size: 20px;
     line-height: 24px
@@ -758,7 +758,9 @@ nav ul {
 
 nav ul li {
     padding: 5px 0px;
-    line-height: 16px
+    line-height: 16px;
+    text-align: left;
+
 }
 
 
@@ -777,10 +779,12 @@ nav ul li.tag-h2+.tag-h1 {
 
 nav ul a {
     color: #666
+    transition:all 0.3s ease;
 }
 
 nav ul a:hover {
-    color: #333
+    color: #333;
+    font-weight: bold;
 }
 
 footer {
