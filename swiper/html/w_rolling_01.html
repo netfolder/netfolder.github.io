@@ -128,19 +128,17 @@
 				return  activeIndex;
 			}
 			var swiper01 = new Swiper('.con01 .slider_wrap .swiper-container', {
-				autoplay : 2000, // 4.5초마다 롤링 , 롤링 안할시 false 값 
+				autoplay : 1000, // 00 초마다 롤링 , 롤링 안할시 false 값 
 				nextButton: '.con01 .swiper-button-next',
 				prevButton: '.con01 .swiper-button-prev',
 				pagination: '.con01 .swiper-pagination',
 				paginationClickable: true,
-				loop: false,
+				loop: true,
 				autoHeight: true,
 				spaceBetween: 0,
 				onSlideChangeEnd : function(event){
               		var num = getSlideDataIndex(event)
 					selectMenu(num)
-
-					console.log(num)
 				}
 			});
 
@@ -149,12 +147,22 @@
 				
 			}
 
+			$(".con01").mouseenter(function(){
+				console.log("stop auto play")
+				swiper01.stopAutoplay();
+			})
+			$(".con01").mouseleave(function(){
+				console.log("start auto play")
+				swiper01.startAutoplay();
+			})
+
+
 
 			$(".menu li>a").each(function(index){
 				var $this = $(this)
 				$this.click(function(){
-					selectMenu(index)
-					swiper01.slideTo(index)
+					//selectMenu(index)
+					swiper01.slideTo(index+1)
 				})
 			});
 
