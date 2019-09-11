@@ -70,14 +70,14 @@ height :         calc(100% - 1px); /* for IE */
 <a name='sample'></a>
 ## rollingPlugin
 
+- swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
+> [(공식 git 방문)](https://github.com/nolimits4web/swiper)
+
 - bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
-	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
+> [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
 
 - slick[(소스보기)](https://netfolder.github.io/slick)
-	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
-
-- swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
-	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
+> [(공식 git 방문)](https://github.com/kenwheeler/slick)
 
 
 
