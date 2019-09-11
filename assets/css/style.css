@@ -743,14 +743,14 @@ small {
 nav {
     width: 400px;
     position: fixed;
-    top: 200px;
-    left: 10px;
+    top: 128px;
+    left: 0px;
     /* margin-left: -767px; */
     text-align: right;
     border: 1px solid #333;
     padding: 17px 5px 0px;
-    border-radius: 15px;
-
+    border-radius: 0 0 15px 0;
+    background: url(../images/background.png) #4276b6;
 }
 
 nav ul {
@@ -782,14 +782,14 @@ nav ul li.tag-h2+.tag-h1 {
 
 nav ul a {
     display: block;
-    color: #666;
+    color: #d8d8d8;
     transition:all 0.3s ease;
     padding: 12px 0px;
     line-height: 16px;
 }
 
 nav ul a:hover {
-    color: #333;
+    color: #f3f3f3;
     font-size:21px;
     line-height:22px;
     font-weight: bold;
