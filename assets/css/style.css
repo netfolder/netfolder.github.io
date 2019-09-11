@@ -741,12 +741,16 @@ small {
 }
 
 nav {
-    width: 350px;
+    width: 400px;
     position: fixed;
     top: 200px;
-    left: 50%;
-    margin-left: -767px;
-    text-align: right
+    left: 10px;
+    /* margin-left: -767px; */
+    text-align: right;
+    border: 1px solid #333;
+    padding: 17px 5px 0px;
+    border-radius: 15px;
+
 }
 
 nav ul {
