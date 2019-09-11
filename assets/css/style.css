@@ -741,7 +741,7 @@ small {
 }
 
 nav {
-    width: 400px;
+    min-width: 300px;
     position: fixed;
     top: 134px;
     left: 0px;
@@ -782,14 +782,14 @@ nav ul li.tag-h2+.tag-h1 {
 
 nav ul a {
     display: block;
-    color: #d8d8d8;
+    color: #999;
     transition:all 0.3s ease;
     padding: 12px 0px;
     line-height: 16px;
 }
 
 nav ul a:hover {
-    color: #f3f3f3;
+    color: #666;
     font-size:21px;
     line-height:22px;
     font-weight: bold;
