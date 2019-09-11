@@ -745,12 +745,12 @@ nav {
     position: fixed;
     top: 134px;
     left: 0px;
-    /* margin-left: -767px; */
-    text-align: right;
-    border: 1px solid #333;
+    text-align: right;    
     padding: 17px 5px 0px;
     border-radius: 0 0 15px 0;
     background: url(../images/background2.png) repeat center top;
+    border: 1px solid #cbcbcb;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.09), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.4);
 }
 
 nav ul {
