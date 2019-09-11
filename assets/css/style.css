@@ -761,8 +761,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 12px 0px;
-    line-height: 16px;
+   
     text-align: left;
 
 }
@@ -782,8 +781,11 @@ nav ul li.tag-h2+.tag-h1 {
 }*/
 
 nav ul a {
+    display: inline-block;
     color: #666;
     transition:all 0.3s ease;
+    padding: 12px 0px;
+    line-height: 16px;
 }
 
 nav ul a:hover {
