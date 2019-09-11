@@ -36,22 +36,7 @@ height :    -moz-calc(100% - 1px); /* for Firefox */
 height :         calc(100% - 1px); /* for IE */
 ```
 
------
 
-
-<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
-
-<a name='sample'></a>
-## rollingPlugin
-
-- bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
-	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
-
-- slick[(소스보기)](https://netfolder.github.io/slick)
-	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
-
-- swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
-	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
@@ -79,6 +64,22 @@ height :         calc(100% - 1px); /* for IE */
 	* 용량 대비 이미지 품질을 고려하여 포맷을 변경할 수도 있다.
 
 
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+<a name='sample'></a>
+## rollingPlugin
+
+- bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
+	+ [(공식 git 방문)](https://github.com/stevenwanderski/bxslider-4)
+
+- slick[(소스보기)](https://netfolder.github.io/slick)
+	+ [(공식 git 방문)](https://github.com/kenwheeler/slick)
+
+- swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
+	+ [(공식 git 방문)](https://github.com/nolimits4web/swiper)
+
+
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
@@ -88,6 +89,7 @@ height :         calc(100% - 1px); /* for IE */
 ## fixedNavigation ( responsive )
 
 - fixedNavigation[(소스보기)](https://netfolder.github.io/samplePage/)
+
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
