@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clash royale random deck</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1, width=device-width, target-densitydpi=medium-dpi">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap" rel="stylesheet">
+		
+		<style>
+			*{padding:0; border:0; margin:0;font-family: 'Nanum Gothic', sans-serif;}
+			#p_wrapper{
+				position: relative; margin-top:0; 
+				background: #002442 url(https://link.clashroyale.com/deck/assets/build/0.3/images/background_m@2x.jpg) no-repeat center top; 
+				background-size: 100vw auto;
+				width:100%; 
+			}
+			#p_contents{
+				background: url(https://link.clashroyale.com/deck/assets/build/0.3/images/logo_clashroyale_m.png) no-repeat 31vw 8vw;
+				width: 100vw;
+				height: 130vw;
+				background-size: 38vw auto;
+			}
+ 			#p_contents .btn{    
+				position: absolute;
+				left: 29vw;
+				top: 95vw;
+				width: 43vw;
+				height: 10vw;
+				background-color: cadetblue;
+				color: #fff0bb;
+				font-size: 5vw;
+				line-height: 9vw;
+				border-radius: 25px;
+				background-color: #022646;
+				border:1px solid #022646;
+				font-weight: bold;
+				
+			}
+			#p_contents .btn_copy{position: absolute;
+				position: absolute;
+				left: 29vw;
+				top: 108vw;
+				width: 43vw;
+				height: 10vw;
+				background-color: cadetblue;
+				color: #fff0bb;
+				font-size: 5vw;
+				line-height: 9vw;
+				border-radius: 25px;
+				background-color: #022646;
+				border:1px solid #022646;
+				font-weight: bold;
+				display: none;
+			}
+			.card_list{
+				position: absolute;
+				left: 10vw;
+				top: 33vw;
+				width: 81vw;
+			}
+			.card_list li{width:20vw; float: left; list-style: none !important}
+			.card_list li img{width:100%; vertical-align: top}
+
+			.notice{color: #fff0bb; font-weight: 400; font-size: 5vw;}
+		</style>
+		<script type="text/javascript">
+			function Card(selector){
+				//console.log("Card 실행")
+				this.isNum = 0;
+				this.card_total = cardArr.length;//카드 유닛 총계
+				this.$mc = selector;//$(".card_list li");
+				this.list_total = this.$mc.length;//픽 카드 계수
+				this.moving();
+				
+				//console.log("카드 총계 : " , this.card_total)
+			}
+			Card.prototype.moving = function(){
+				var self = this;
+				var limit_time = 2000 + Math.floor(Math.random(10) * 3000 );
+				//var limit_time = 5000
+				setTimeout(function(){
+					//랜덤초 지난후  삭제
+					//console.log(limit_time +" 초뒤 롤링타이머 삭제")
+					clearInterval(time);
+					self.complete();
+				},limit_time)
+				var time = setInterval(function(){;
+					//console.log(self.isNum)
+					if(self.isNum < self.card_total-1){
+						self.isNum++;
+					}else{
+						self.isNum = 0;
+					}
+					try{
+						self.$mc.find("img").attr("src" ,cardArr[self.isNum][0])	
+						self.$mc.find("img").attr("data-src" ,cardArr[self.isNum][2])	
+					}catch(err){
+						//console.log("error  : " , err)
+					}
+				},8)
+			}
+			Card.prototype.complete = function(){
+				try{
+					card_deck_id.push(cardArr[this.isNum][2])
+					card_deck_name.push(cardArr[this.isNum][0])
+					delete cardArr[this.isNum]				
+					console.log("저장된 deck id : " , card_deck_id , card_deck_name)
+					
+					if(card_deck_id.length > 7){
+						$(".btn_copy").fadeIn("slow");	
+					}else if(card_deck_id.length != 8) {
+						$(".btn").html(" Re-Mix ")
+					}
+						
+					
+				}catch(err){
+					//console.log("error  : " , err)
+				}
+			};
+			var card_deck_id = []
+			var card_deck_name = []
+			var cardArr = []	
+			var btn_click_state = true;
+			var json_url = "https://royaleapi.github.io/cr-api-data/json/cards.json";
+			$(document).ready(function(){
+				$.getJSON(json_url, function(result){
+					$.each(result, function(i, field){		
+						console.log("load")
+						var str = field.key+".png";
+						/* var str = field.key.replace("-","_")+".png";
+						console.log("==>  " , str)
+						if(str == "x_bow.png"){
+							str = "xbow.png"
+						}else if(str == "royal_ghost.png"){
+							str = "royal-ghost.png"
+						} */
+						cardArr.push(["cards-150/"+str , field.elixir ,field.id])
+						//cardArr.push(["icon/"+field.key+".png" , field.elixir ,field.id])
+					})
+					//console.log("json : "  ,cardArr)
+					//console.log("==========================================")
+					//console.log(cardArr[50][0])
+				});
+				//버튼
+				$(".btn").click(function(){
+					if(btn_click_state){
+						//console.log("click");
+						var card1 = new Card($(".card_list li:eq(0)"));	
+						var card2 = new Card($(".card_list li:eq(1)"));	
+						var card3 = new Card($(".card_list li:eq(2)"));	
+						var card4 = new Card($(".card_list li:eq(3)"));	
+						var card5 = new Card($(".card_list li:eq(4)"));	
+						var card6 = new Card($(".card_list li:eq(5)"));	
+						var card7 = new Card($(".card_list li:eq(6)"));	
+						var card8 = new Card($(".card_list li:eq(7)"));	
+						//setTimeout(function(){$(".btn_copy").css("display" , "block")},Math.floor(Math.random() * 4000) + 1000)
+						btn_click_state = !btn_click_state;
+						$(".btn").html(" Reset ")
+					}else{
+						$(".btn_copy").css("display" , "none")
+						location.reload();
+					}					
+				})
+				var array = [1,2,3,4,5,6,7,7]; 
+				function unique(array) {
+					var result=[]; // 중복이 없다면 false  있다면 true					
+					$.each(array, function(index, element) {   // 배열의 원소수만큼 반복
+						if ($.inArray(element, result) == -1) {  // result 에서 값을 찾는다.  //값이 없을경우(-1)
+							result.push(element);     // result 배열에 값을 넣는다.
+							//return false;
+						}else{
+							//result = false;
+							//return true;
+						}
+					});
+					return result;
+				}
+				console.log("중복여부  : " , unique(array).length)
+				$(".btn_copy").click(function(){
+					if(card_deck_id.length == 8  ||  unique(array).length == 8){
+						var testArr = []
+						var str;
+						$(".card_list li>img").each(function(index){
+							testArr.push($(this).attr("data-src"));
+							str = testArr.join(";");	
+						})
+						window.open('https://link.clashroyale.com/deck/en?deck='+str);							
+					}else{
+						alert("error혹은 카드가 중복 입니다.  카드를 다시 섞어주세요")
+					}
+				})
+			});
+		</script>	
+</head>
+<body>
+		<div id="p_wrapper">
+			<div id="p_contents">
+
+				<ul class="card_list">
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+					<li><img src="cards-150/princess.png" alt=""></li>
+				</ul>
+				<button class="btn" type="button">Shuffle</button>
+				<button class="btn_copy" type="button">Copying cards</button>
+			</div>
+
+			<marquee class="notice">If a duplicate card comes out, mix it again. 중복 카드가 나오면 다시 섞어주세요.</marquee>
+		</div>
+</body>
+</html>
+	
