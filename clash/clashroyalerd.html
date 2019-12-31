@@ -66,6 +66,7 @@
 			.card_list li img{width:100%; vertical-align: top}
 
 			.notice{color: #fff0bb; font-weight: 400; font-size: 5vw;}
+			.img_case img{display: none;}
 		</style>
 		<script type="text/javascript">
 			function Card(selector){
@@ -108,7 +109,7 @@
 					card_deck_id.push(cardArr[this.isNum][2])
 					card_deck_name.push(cardArr[this.isNum][0])
 					delete cardArr[this.isNum]				
-					console.log("저장된 deck id : " , card_deck_id , card_deck_name)
+					//console.log("저장된 deck id : " , card_deck_id , card_deck_name)
 					
 					if(card_deck_id.length > 7){
 						$(".btn_copy").fadeIn("slow");	
@@ -129,8 +130,9 @@
 			$(document).ready(function(){
 				$.getJSON(json_url, function(result){
 					$.each(result, function(i, field){		
-						console.log("load")
+						//console.log("load")
 						var str = field.key+".png";
+						console.log(str)
 						/* var str = field.key.replace("-","_")+".png";
 						console.log("==>  " , str)
 						if(str == "x_bow.png"){
@@ -197,6 +199,104 @@
 		</script>	
 </head>
 <body>
+	<div class="img_case">
+		<img src="cards-75/knight.png" />
+		<img src="cards-75/archers.png" />
+		<img src="cards-75/goblins.png" />
+		<img src="cards-75/giant.png" />
+		<img src="cards-75/pekka.png" />
+		<img src="cards-75/minions.png" />
+		<img src="cards-75/balloon.png" />
+		<img src="cards-75/witch.png" />
+		<img src="cards-75/barbarians.png" />
+		<img src="cards-75/golem.png" />
+		<img src="cards-75/skeletons.png" />
+		<img src="cards-75/valkyrie.png" />
+		<img src="cards-75/skeleton-army.png" />
+		<img src="cards-75/bomber.png" />
+		<img src="cards-75/musketeer.png" />
+		<img src="cards-75/baby-dragon.png" />
+		<img src="cards-75/prince.png" />
+		<img src="cards-75/wizard.png" />
+		<img src="cards-75/mini-pekka.png" />
+		<img src="cards-75/spear-goblins.png" />
+		<img src="cards-75/giant-skeleton.png" />
+		<img src="cards-75/hog-rider.png" />
+		<img src="cards-75/minion-horde.png" />
+		<img src="cards-75/ice-wizard.png" />
+		<img src="cards-75/royal-giant.png" />
+		<img src="cards-75/guards.png" />
+		<img src="cards-75/princess.png" />
+		<img src="cards-75/dark-prince.png" />
+		<img src="cards-75/three-musketeers.png" />
+		<img src="cards-75/lava-hound.png" />
+		<img src="cards-75/ice-spirit.png" />
+		<img src="cards-75/fire-spirits.png" />
+		<img src="cards-75/miner.png" />
+		<img src="cards-75/sparky.png" />
+		<img src="cards-75/bowler.png" />
+		<img src="cards-75/lumberjack.png" />
+		<img src="cards-75/battle-ram.png" />
+		<img src="cards-75/inferno-dragon.png" />
+		<img src="cards-75/ice-golem.png" />
+		<img src="cards-75/mega-minion.png" />
+		<img src="cards-75/dart-goblin.png" />
+		<img src="cards-75/goblin-gang.png" />
+		<img src="cards-75/electro-wizard.png" />
+		<img src="cards-75/elite-barbarians.png" />
+		<img src="cards-75/hunter.png" />
+		<img src="cards-75/executioner.png" />
+		<img src="cards-75/bandit.png" />
+		<img src="cards-75/royal-recruits.png" />
+		<img src="cards-75/night-witch.png" />
+		<img src="cards-75/bats.png" />
+		<img src="cards-75/royal-ghost.png" />
+		<img src="cards-75/ram-rider.png" />
+		<img src="cards-75/zappies.png" />
+		<img src="cards-75/rascals.png" />
+		<img src="cards-75/cannon-cart.png" />
+		<img src="cards-75/mega-knight.png" />
+		<img src="cards-75/skeleton-barrel.png" />
+		<img src="cards-75/flying-machine.png" />
+		<img src="cards-75/wall-breakers.png" />
+		<img src="cards-75/royal-hogs.png" />
+		<img src="cards-75/goblin-giant.png" />
+		<img src="cards-75/fisherman.png" />
+		<img src="cards-75/magic-archer.png" />
+		<img src="cards-75/electro-dragon.png" />
+		<img src="cards-75/elixir-golem.png" />
+		<img src="cards-75/battle-healer.png" />
+		<img src="cards-75/cannon.png" />
+		<img src="cards-75/goblin-hut.png" />
+		<img src="cards-75/mortar.png" />
+		<img src="cards-75/inferno-tower.png" />
+		<img src="cards-75/bomb-tower.png" />
+		<img src="cards-75/barbarian-hut.png" />
+		<img src="cards-75/tesla.png" />
+		<img src="cards-75/elixir-collector.png" />
+		<img src="cards-75/x-bow.png" />
+		<img src="cards-75/tombstone.png" />
+		<img src="cards-75/furnace.png" />
+		<img src="cards-75/goblin-cage.png" />
+		<img src="cards-75/fireball.png" />
+		<img src="cards-75/arrows.png" />
+		<img src="cards-75/rage.png" />
+		<img src="cards-75/rocket.png" />
+		<img src="cards-75/goblin-barrel.png" />
+		<img src="cards-75/freeze.png" />
+		<img src="cards-75/mirror.png" />
+		<img src="cards-75/lightning.png" />
+		<img src="cards-75/zap.png" />
+		<img src="cards-75/poison.png" />
+		<img src="cards-75/graveyard.png" />
+		<img src="cards-75/the-log.png" />
+		<img src="cards-75/tornado.png" />
+		<img src="cards-75/clone.png" />
+		<img src="cards-75/earthquake.png" />
+		<img src="cards-75/barbarian-barrel.png" />
+		<img src="cards-75/heal.png" />
+		<img src="cards-75/giant-snowball.png" />
+	</div>
 		<div id="p_wrapper">
 			<div id="p_contents">
 
