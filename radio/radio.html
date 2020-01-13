@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radio btn custom</title>
+    <style>
+        p{position: relative;}
+
+        .circle{background-color: #fff;width: 36px; height: 36px; border:2px solid #01b4f8; color: #01b4f8; display: inline-block; line-height: 30px; border-radius: 50%; text-align: center; box-sizing: border-box; text-indent: 1px;}
+        .box-radio-input input[type="radio"]{
+            display: block;
+            position: absolute;
+            left:0px; top:0px;
+            width:100%; height: 100%;
+            opacity: 0;
+
+        }
+
+        .box-radio-input input[type="radio"] + span{
+            background-color: #fff;width: 36px; height: 36px; border:2px solid #01b4f8; color: #01b4f8; display: inline-block; line-height: 30px; border-radius: 50%; text-align: center; box-sizing: border-box; text-indent: 1px; cursor: pointer;  
+
+        }
+
+        .box-radio-input input[type="radio"]:checked + span{
+        
+            border-color:#01b4f8; background-color: #01b4f8;width: 36px; height: 36px; color: #fff; display: inline-block;  border-radius: 50%; text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1" ><span class="circle">1</span></label></p>
+    <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">2</span></label></p>
+    <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">3</span></label></p>
+</body>
+</html>
