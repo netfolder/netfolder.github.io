@@ -113,7 +113,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 
 
 <a name='radio'></a>
-## 미리보기[(go)](https://netfolder.github.io/radio/radio.html)
+## radio btn custom[(go)](https://netfolder.github.io/radio/radio.html)
 
 ``` css
  p{position: relative;}
