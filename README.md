@@ -10,6 +10,7 @@
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
 * image 사용법[【↓】](#image)
 * youtobe 이것저것[【↓】](#youtobe)
+* radio btn custom [【↓】](#radio)
 
 -----
 
@@ -72,6 +73,7 @@ height :         calc(100% - 1px); /* for IE */
 
 - swiper 3.x[(소스보기)](https://netfolder.github.io/swiper)
 > [(공식 git 방문)](https://github.com/nolimits4web/swiper)
+
 > [(3.x api)](http://g-mops.net/epica_swiper/api/index.html)
 
 - bxSlider[(소스보기)](https://netfolder.github.io/bxSlider/)
@@ -103,6 +105,28 @@ height :         calc(100% - 1px); /* for IE */
 ``` html
 //반복재생
 http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
+```
+
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+
+<a name='radio'></a>
+## 미리보기[(go)](https://netfolder.github.io/radio/radio.html)
+
+``` css
+ p{position: relative;}
+.circle{background-color: #fff;width: 36px; height: 36px; border:2px solid #01b4f8; color: #01b4f8; display: inline-block; line-height: 30px; border-radius: 50%; text-align: center; box-sizing: border-box; text-indent: 1px;}
+.box-radio-input input[type="radio"]{display: block;position: absolute;left:0px; top:0px;width:100%; height: 100%;opacity: 0;}
+.box-radio-input input[type="radio"] + span{background-color: #fff;width: 36px; height: 36px; border:2px solid #01b4f8; color: #01b4f8; display: inline-block; line-height: 30px; border-radius: 50%; text-align: center; box-sizing: border-box; text-indent: 1px; cursor: pointer;}
+.box-radio-input input[type="radio"]:checked + span{border-color:#01b4f8; background-color: #01b4f8;width: 36px; height: 36px; color: #fff; display: inline-block;  border-radius: 50%; text-align: center;}
+```
+
+``` html
+<p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1" ><span class="circle">1</span></label></p>
+<p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">2</span></label></p>
+<p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">3</span></label></p>
 ```
 
 -----
