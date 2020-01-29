@@ -1,0 +1,310 @@
+
+(function(win,doc,$) {
+
+	$(function() {
+
+		var PopupEl = null,	// 팝업
+			RstEl = null, // 변환된값 표시 
+			RstBar = null, // px 가로 그래프
+			RstPxEl = null, // px text
+			RstVwEl = null, // vw text
+
+			RstPxInputEl = null, // vw변환 px input
+			RstVwInputEl = null, // vw변환 vw input
+			RstVwSetInputEl = null, // vw변환 vw set input
+			Viewport_w = 0, // viewport
+			Css_px_set = 0, // 초기 1vw px 값
+
+			RstPxInputEl2 = null, // px변환 px input
+			RstVwInputEl2 = null, // px변환 vw input
+			RstVwSetInputEl2 = null, // px변환 vw set input
+			Viewport_w2 = 0, // viewport
+			Css_px_set2 = 0, // 초기 1vw px 값
+
+
+			Css_px = 0, // px 값
+			Css_vw = 0, // vx 값
+			DefaultPx = 300; // 초기 px 값
+
+
+		var txtareaSrc = null,
+			txtareaRst = null,
+			txtareaSrc2 = null,
+			txtareaRst2 = null,
+			//regEx = /([0-9]+\s*px)/gi,
+			regEx = /(\d*(\.?\d*)+\s*px)/gi,
+			regEx2 = /(\d*(\.?\d*)+\s*vw)/gi,
+			regStr = "\\s?:\\s?[\\w\\s-#\\'\\\"]*(\\s!important)?\\s?;",
+			removeTag = [
+				"overflow",
+				"display",
+				"float",
+				"text-align",
+				"background-color",
+				"background-size",
+				"background-repeat",
+				"background-position",
+				"color",
+				"font-weight",
+				"z-index",
+				"border-collapse",
+				"table-layout",
+				"vertical-align",
+				"position",
+				
+				"box-sizing",
+				"font-family",
+				"content"
+			];
+
+		var Cda = {
+			_loadingHtml : function() {
+				
+				Cda._calElInit(); // elelment 등록
+				Cda._RstEl_Draggable(); // 
+
+
+				var init_px = DefaultPx,
+					init_vw = (DefaultPx / Css_vw).toFixed(2);
+
+					Cda._calCdaInit();
+					Cda._calcdaEvt();
+					//Cda._calResizeEvt();
+
+			},
+
+			_RstEl_Draggable : function() {
+				RstEl.draggable();
+			},
+			_RstEl_Set : function(px,vw) {
+				
+
+				RstPxEl.html( init_px+" PX");
+				RstVwEl.html( init_vw+" VW");
+				RstBar.css("width",DefaultPx+"px");
+
+				RstPxInputEl.val(init_px);
+				RstVwInputEl.val(init_vw);
+
+				// 
+				Css_px = DefaultPx;
+			},
+
+			_popup : function() {
+				$(doc).on("click",".btn-cda-start",function() {
+					var $this = $(this),
+						$delay = 100;
+
+					loadingShow(true);			
+					setTimeout(function() {
+						showLayerPopup({
+							layer : PopupEl,
+							dimmed : false,
+							beforeClose : function() {
+								RstEl.hide();
+							}
+						});
+
+						RstEl.show();
+						loadingHide();
+					},$delay);
+
+				});
+			},
+			_calElInit : function() {
+				PopupEl = $(".cda-pop-cal");
+				
+				RstEl = $(".cda-result-area");
+				RstBar = $(".cda-result-bar");
+				RstPxEl = $(".cda-px-box");
+				RstVwEl = $(".cda-vw-box");
+
+				RstPxInputEl = $(".cdaform .cda-px-input");
+				RstVwInputEl = $(".cdaform .cda-vw-input");
+				RstVwSetInputEl = $(".cdaform .cda-px-set-input");
+
+				RstPxInputEl2 = $(".cdaform2 .cda-px-input");
+				RstVwInputEl2 = $(".cdaform2 .cda-vw-input");
+				RstVwSetInputEl2 = $(".cdaform2 .cda-px-set-input");
+
+
+				txtareaSrc = $(".cdaformTxt .txtareaSrc");
+				txtareaRst = $(".cdaformTxt .txtareaRst");
+				txtareaSrc2 = $(".cdaformTxt2 .txtareaSrc");
+				txtareaRst2 = $(".cdaformTxt2 .txtareaRst");
+
+
+			},
+			_calCdaInit : function() {
+				Viewport_w = getViewportW();
+				Css_px_set = Viewport_w / 100;
+
+				Viewport_w2 = getViewportW2();
+				Css_px_set2 = Viewport_w2 / 100;
+			},
+			_calcdaEvt : function() {
+
+				// px -> vw
+				$(doc).on("submit",".cdaform",function(e) {
+					preventDefault(e);
+
+					Cda._calCdaInit();
+
+					Css_px = RstPxInputEl.val();
+
+					//Css_vw = (Css_px / Css_px_set).toFixed(4);
+					Css_vw = (Css_px / Css_px_set).toFixed( $(this).find(".to_fixed").val() );
+					RstVwInputEl.val(Css_vw);
+
+
+					RstPxEl.html( Css_px+" PX");
+					RstVwEl.html( Css_vw+" VW");
+					RstBar.css("width",Css_px+"px");
+
+				});
+
+				// css : px -> vw
+				$(doc).on("submit",".cdaformTxt",function(e) {
+					preventDefault(e);
+
+					Cda._convertCssVw( $(this) );
+
+				});
+
+				// vw -> px
+				$(doc).on("submit",".cdaform2",function(e) {
+					preventDefault(e);
+
+					Cda._calCdaInit();
+
+					Css_vw = RstVwInputEl2.val();
+
+					//Css_px = ( Css_vw * Css_px_set2 ).toFixed(4);
+					Css_px = Math.round( Css_vw * Css_px_set2 );
+					RstPxInputEl2.val(Css_px);
+
+
+					RstPxEl.html( Css_px+" PX");
+					RstVwEl.html( Css_vw+" VW");
+					RstBar.css("width",Css_px+"px");
+
+				});
+
+				// css : px -> vw
+				$(doc).on("submit",".cdaformTxt2",function(e) {
+					preventDefault(e);
+
+					Cda._convertCssPx();
+
+				});
+			},
+			
+			_calResizeEvt : function() {
+				$(win).on("resize",function() {
+					Cda._calCdaInit();
+
+					var init_px = Css_px,
+						init_vw = (Css_px / Css_px_set).toFixed(4);
+
+
+					RstPxEl.html( init_px+" PX");
+					RstVwEl.html( init_vw+" VW");
+
+					RstPxInputEl.val(init_px);
+					RstVwInputEl.val(init_vw);
+
+
+				});
+			},
+			_convertCssVw : function(obj) {
+
+				var src = txtareaSrc.val();
+
+				var r = src.replace(regEx,  function($1) {
+						var a = $1.replace("px",""),
+							st = $(".cdaformTxt .cda-px-set-input").val();
+
+							a = Number(a);
+							//a = (a / ( st / 100)).toFixed(4);
+							a = (a / ( st / 100)).toFixed( obj.find(".to_fixed").val() );
+							a = a + "vw";
+
+							return a;
+				})	;
+
+				var str_r = "",
+					re = null;
+
+				if($("#attr_chk").is(":checked")) {
+					for(var i = 0; i < removeTag.length; i++) {
+						str_r = removeTag[i] + regStr;
+						re = new RegExp(str_r, "gi");
+					
+						r = r.replace(re, "" );
+					}
+				}
+	
+				txtareaRst.addClass("on").val ( r ).select();
+
+			},
+			_convertCssPx : function() {
+
+				var src = txtareaSrc2.val();
+
+				var r = src.replace(regEx2,  function($1) {
+						var a = $1.replace("vw",""),
+							st = $(".cdaformTxt2 .cda-px-set-input").val();
+
+							a = Number(a);
+							a = Math.round( a * (st / 100) );
+							a = a + "px";
+
+							return a;
+				})	;
+
+				var str_r = "",
+					re = null;
+
+				if($("#attr_chk2").is(":checked")) {
+					for(var i = 0; i < removeTag.length; i++) {
+						str_r = removeTag[i] + regStr;
+						re = new RegExp(str_r, "gi");
+					
+						r = r.replace(re, "" );
+					}
+				}
+	
+				txtareaRst2.addClass("on").val ( r ).select();
+
+			},
+			init : function() {
+				this._loadingHtml();
+				this._popup();
+				//this._calCdaInit();
+				//this._calcdaEvt();
+				//this._calResizeEvt();
+
+				setTimeout(function() {
+					$(".btn-cda-start").trigger("click");
+				},100);
+
+			}
+		}
+
+		function getViewportW() {
+			//return $(window).width();
+			return RstVwSetInputEl.val();
+		}
+
+		function getViewportW2() {
+			//return $(window).width();
+			return RstVwSetInputEl2.val();
+		}
+
+
+		// init
+		Cda.init();
+	});
+
+})(window,document,window.jQuery);
+

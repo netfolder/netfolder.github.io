@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,
+big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,
+dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video,input{
+	margin:0;
+	padding:0;
+	border:0;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+html,body {height:100%;font-size:13px;color:#252525;font-family:AppleSDGothicNeo-Light,'HelveticaNeue','Malgun Gothic','맑은 고딕',sans-serif;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+
+
+
+.box {position:relative;}
+.inner {position:absolute;left:0;top:0;}
+.inner button {border:1px solid #fff;width:170px;border-radius:45px;font-size:14px;padding:10px 30px;margin-top:2%;background:#fff;color:#000;position:absolute;}
+.image {height:100%;}
+.image img {width:100%;}
+
+@media screen and (max-width:1439px) {
+	.box {width:100%;}
+	
+	.inner button {top:39.2361vw;}
+	.btn-1 {left:13.3333vw;}
+	.btn-2 {left:28.8194vw;}
+	.btn-3 {left:44.0972vw;}
+	.btn-4 {left:59.3750vw;}
+	.btn-5 {left:74.6528vw;}
+}
+@media screen and (min-width:1440px) {
+	.box {width:1440px;margin:0 auto;}
+	.inner button {top:565px;}
+	.btn-1 {left:192px;}
+	.btn-2 {left:415px;}
+	.btn-3 {left:635px;}
+	.btn-4 {left:855px;}
+	.btn-5 {left:1075px;}
+}
+
+/*------------------------------------------------
+* z-index
+/*------------------------------------------------*/
+/* z-index */
+.cda-start-btn {z-index:9000;}
+.cda-result-txt {z-index:9100;}
+.cda-popup {z-index:9800;}
+.cda-dimmed {z-index:9500;}
+.cda-loading {z-index:9999;}
+
+
+/*------------------------------------------------
+* button
+/*------------------------------------------------*/
+/* */
+.css-btn-area {
+	font-size: 0px;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	user-select:none;
+	-ms-user-select: none;
+}
+.css-btn-area button {display:inline-block;}
+.css-btn-area button:not(:nth-child(1)) {margin-left:10px;}
+
+button.cda-btn {
+	position:relative;
+	overflow:hidden;
+	background:transparent;
+	cursor:pointer;
+	background-color:transparent;
+	border:1px solid #e1e1e1;
+	height:30px;
+	padding:0 10px;
+	font-size:12px;
+	box-sizing:border-box;
+	border-radius:3px;
+	white-space:pre;
+	vertical-align:middle;
+	transition:border-color .3s;
+	user-select:none;
+	-ms-user-select: none;
+}
+button.cda-btn:hover {border:1px solid #464646;}
+button.cda-btn:before {transition:opacity .3s;opacity:.3;}
+button.cda-btn:hover:before {opacity:1;}
+button.cda-btn span {position:relative;top:-1px;}
+
+button.disable {background:#ccc;cursor:default;border:1px solid #ccc;}
+button.disable:hover {border:1px solid #ccc;}
+
+/* btn-cal-cda */
+button.btn-cal-cda {font-size:14px;font-weight:bold;min-width:96px;height:32px;background:#2196F3;color:#fff;border:none;padding:0 20px;}
+button.btn-cal-cda:hover {border:none;}
+
+/* 레이어팝업 닫기 */
+button.btn-layer-close {width:15px;height:15px;padding:0;border:none;transition:transform .3s;}
+button.btn-layer-close span {display:none;}
+button.btn-layer-close:before {content:"";display:inline-block;position:absolute;width:100%;height:100%;left:0px;top:0px;background:url('../images/cda_sp.png') no-repeat;background-position:-142px -71px;opacity:0.5;}
+button.btn-layer-close:hover {border:none;transform:rotate(180deg);}
+
+
+/* button ripple */
+.btn-ripple:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .3);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+.btn-ripple:focus:not(:active)::after {
+  animation: ripple .6s ease-out;
+}
+
+
+/*------------------------------------------------
+* popup
+/*------------------------------------------------*/
+/* layout */
+.cda-popup {position:fixed; overflow-y:visible; padding:0px; background:#fff;left:50%;top:50%; min-width:380px;  box-shadow:5px 5px 15px 0px rgba(0,0,0,.35);display:none;}
+.cda-popup .pop-header {position:relative;height:50px;padding:0 20px;background:#2196F3;}
+.cda-popup .pop-header.ui-draggable-handle {cursor:move;}
+.cda-popup .pop-header h1 {position:absolute;left:20px;bottom:0;right:20px;color:#fff;letter-spacing:-2px;font-size:20px;padding-bottom:12px;font-weight:normal;}
+.cda-popup .pop-header .btn-layer-close {position:absolute;top:20px;right:20px;z-index:100;}
+.cda-popup .pop-body {padding:20px;}
+.cda-popup .pop-body h2 {display:none;}
+.cda-popup .pop-body h3 {font-size:16px;height:30px;letter-spacing:-1.5px;}
+
+
+/*------------------------------------------------
+*  loading
+/*------------------------------------------------*/
+.cda-loading {
+	position:absolute;
+    border: 8px solid #0054a6;
+    border-top: 8px solid #0080c6;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+	left:50%;
+	top:50%;
+	margin:-25px 0 0 -25px;
+	animation: spin 0.6s linear infinite;
+	opacity:0.7;
+	display:none;
+}
+.cda-loading.small {
+    border: 4px solid #0054a6;
+    border-top: 4px solid #0080c6;
+    width:26px;
+    height:26px;
+	margin:-13px 0 0 -13px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cda-dimmed {position:fixed;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.3;display:none;}
+.cda-dimmed.white {background:#fff;opacity:0.2;}
+
+
+/*------------------------------------------------
+*  contents
+/*------------------------------------------------*/
+
+.cda-section {position:static;}
+
+/* cda-start-area */
+.cda-start-area {position:absolute;right:10px;bottom:10px;}
+.cda-start-area button.cda-btn {background-color:#2196F3;border:1px solid #2196F3;width:50px;height:50px;border-radius:100%;color:#fff;}
+.cda-start-area button.cda-btn:hover {border:1px solid #2196F3;}
+
+/* cda-result-area */
+.cda-result-area {position:fixed;left:50%;top:50%;width:300px;margin:0 0 0 -150px;text-align:center;display:none;}
+.cda-result-area.ui-draggable-handle {cursor:move;}
+.cda-result-bar {
+	position:absolute;
+	width:100px;
+	height:10px;
+	left:0;
+	top:0;
+	border-radius:4px;
+	transition:all 0.3s ease-in-out;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2196f3+0,7db9e8+100 */
+	background: #2196f3; /* Old browsers */
+	background: -moz-linear-gradient(left, #2196f3 0%, #7db9e8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #2196f3 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #2196f3 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2196f3', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+}
+.cda-result-box {position:absolute;background-color:#ffffe1;border:1px solid #000;font-size:0;left:0;top:15px;width:300px;}
+.cda-result-box>div {display:inline-block;font-size:24px;font-weight:bold;line-height:40px;}
+.cda-result-box .cda-result-etc {padding:0 10px;}
+
+
+/* css-pop-cal */
+.cda-pop-cal {display:none;width:95%;}
+.cda-pop-cont:after {content:"";display:block;clear:both;}
+.cda-pop-cont .cda-pop-txt {text-align:center;font-weight:bold;font-size:20px;padding:0 0 20px 0;}
+.cda-pop-cont .cda-pop-txt .checkbox_box {padding:0 0 0 15px;}
+.cda-pop-cont .cda-pop-txt .checkbox_box input[type="checkbox"] {margin-right:5px;}
+.cda-pop-cont .cda-pop-box {font-size:20px;line-height:20px;text-align:center;}
+.cda-pop-cont .css-btn-area {text-align:center;padding-top:20px;}
+.cda-pop-cont input[type="text"] {width:150px;border:1px solid #ccc;box-sizing:border-box;height:40px;line-height:38px;text-align:center;font-size:20px;outline:0;}
+.cda-pop-cont input[type="text"]::-ms-clear {display:none;}
+.cda-pop-cont input[type="text"].to_fixed {width:80px;}
+
+.cda-box {width:49%;}
+.cda-box-1 {float:left;}
+.cda-box-2 {float:right;}
+.cda-box .cdaformTxt,
+.cda-box .cdaformTxt2 {padding-top:20px;}
+
+.cda-box textarea {resize:none;width:48%;height:400px;box-sizing:border-box;padding:10px;font-size:12px;}
+.cda-box textarea.txtareaRst {border: 1px solid #e1e1e1;background-color: #f2f2f2;color: #ccc;}
+.cda-box textarea.txtareaRst.on {border: 1px solid #e1e1e1;background-color: #ffff;color: #000;}
+
+.cda-pop-cont .cdaform .cda-vw-input,
+.cda-pop-cont .cdaform2 .cda-px-input {border:1px solid #e1e1e1;background-color:#f2f2f2;color:#ccc;}
+
+
+
+
+
+/*------------------------------------------------
+* hack
+/*------------------------------------------------*/
+
+/* chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    button.cda-btn span {top:-1px;}
+}

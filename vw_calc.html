@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://publishing.kr/vw/ -->
+<html lang="kr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>VW 계산기</title>
+<link type="text/css" rel="stylesheet" href="./vw_calc_files/cda_style.css">
+<link type="text/css" rel="stylesheet" href="./vw_calc_files/jquery-ui.min.css">
+<script type="text/javascript" src="./vw_calc_files/jquery-1.11.3.min.js.다운로드"></script>
+<script type="text/javascript" src="./vw_calc_files/jquery-ui.min.js.다운로드"></script>
+<script type="text/javascript" src="./vw_calc_files/cda_common.js.다운로드"></script>
+<script type="text/javascript" src="./vw_calc_files/cda_script.js.다운로드"></script>
+<!-- <script src="./jquery-1.11.3.min.js"></script> -->
+</head>
+<body>
+
+	<div class="cda-section">
+		<!-- 버튼 -->
+		<div class="cda-start-area">
+			<button type="button" class="cda-btn btn-cda-start"><span>CDA</span></button>
+		</div>
+
+		<!-- 결과 -->
+		<div class="cda-result-area ui-draggable ui-draggable-handle" style="display: block;">
+			<div class="cda-result-bar"></div>
+			<div class="cda-result-box">
+				<div class="cda-px-box">0 PX</div>
+				<div class="cda-result-etc"> / </div>
+				<div class="cda-vw-box">0 VW</div>
+			</div>
+		</div>
+
+		<!-- 계산 팝업 -->
+		<div class="cda-popup cda-pop-cal ui-draggable" style="margin-top: -388px; margin-left: -904px; display: block;">
+			<div class="pop-header ui-draggable-handle">
+				<h1>계산</h1>
+				<button type="button" class="cda-btn btn-layer-close"><span>레이어팝업 닫기</span></button>
+			</div>
+			<div class="pop-body">
+
+				<!-- 계산하기정보수정 -->
+				<div class="cda-pop-cont">
+					<h2>계산하기</h2>
+
+					<div class="cda-box cda-box-1">
+						<form name="cdaform" class="cdaform" method="post">
+							<div class="cda-pop-txt">
+								Viewport Width : <span><input type="text" name="cda_px_set" class="cda-px-set-input" value="1440"> PX</span>
+								/ 소수점 : <span><input type="text" name="to_fixed" class="to_fixed" value="4" maxlength="1"></span>
+							</div>
+							<div class="cda-pop-box">
+								<span><input type="text" name="cda_px" class="cda-px-input"> PX</span>
+								<span><input type="text" name="cda_vw" class="cda-vw-input" readonly=""> VW</span>
+							</div>
+							<div class="css-btn-area">
+								<button type="submit" class="cda-btn btn-cal-cda btn-ripple"><span>계산하기</span></button>
+							</div>
+						</form>
+
+						<form name="cdaformTxt" class="cdaformTxt" method="post">
+							<div class="cda-pop-txt">
+								Viewport Width : <span><input type="text" name="cda_px_set" class="cda-px-set-input" value="1440"> PX</span>
+								/ 소수점 : <span><input type="text" name="to_fixed" class="to_fixed" value="4" maxlength="1"></span>
+								<span class="checkbox_box"><input type="checkbox" name="attr_chk" id="attr_chk" checked=""><label for="attr_chk">속성 삭제</label></span>
+							</div>
+							<div class="cda-pop-box">
+								<textarea name="textarea" class="txtareaSrc" placeholder="css 소스를 입력하세요."></textarea>
+								<textarea name="textarea" class="txtareaRst" readonly=""></textarea>
+							</div>
+							<div class="css-btn-area">
+								<button type="submit" class="cda-btn btn-cal-cda btn-ripple"><span>계산하기</span></button>
+							</div>
+						</form>
+					</div>
+
+					<div class="cda-box cda-box-2">
+						<form name="cdaform2" class="cdaform2" method="post">
+							<div class="cda-pop-txt">
+								Viewport Width : <span><input type="text" name="cda_px_set" class="cda-px-set-input" value="1440"> PX</span>
+							</div>
+							<div class="cda-pop-box">
+								<span><input type="text" name="cda_vw" class="cda-vw-input"> VW</span>
+								<span><input type="text" name="cda_px" class="cda-px-input" readonly=""> PX</span>
+							</div>
+							<div class="css-btn-area">
+								<button type="submit" class="cda-btn btn-cal-cda btn-ripple"><span>계산하기</span></button>
+							</div>
+						</form>
+
+						<form name="cdaformTxt2" class="cdaformTxt2" method="post">
+							<div class="cda-pop-txt">
+								Viewport Width : <span><input type="text" name="cda_px_set" class="cda-px-set-input" value="1440"> PX</span>
+								<span class="checkbox_box"><input type="checkbox" name="attr_chk" id="attr_chk2" checked=""><label for="attr_chk2">속성 삭제</label></span>
+							</div>
+							<div class="cda-pop-box">
+								<textarea name="textarea" class="txtareaSrc" placeholder="css 소스를 입력하세요."></textarea>
+								<textarea name="textarea" class="txtareaRst" readonly=""></textarea>
+							</div>
+							<div class="css-btn-area">
+								<button type="submit" class="cda-btn btn-cal-cda btn-ripple"><span>계산하기</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 기타 -->
+		<div class="cda-loading" style="display: none;"></div>
+		<div class="cda-dimmed white" style="display: none;"></div>
+	</div>
+
+
+
+</body></html>
