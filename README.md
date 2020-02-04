@@ -115,7 +115,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 
 
 <a name='video'></a>
-## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)
+## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)[(샘플보기)](https://netfolder.github.io/video/video.html)
 
 ![Alt text](video/video.jpg)
 
