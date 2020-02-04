@@ -117,6 +117,8 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 <a name='video'></a>
 ## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)
 
+![Alt text](video/video.jpg)
+
 ``` html
 //초기값
 <video id="vod_obj" width="100%" height="240" controls="" style="margin-bottom: 50px;">
