@@ -119,11 +119,26 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 
 ``` html
 //초기값
-<video width="320" height="240" controls="" style="margin-bottom: 50px;">
+<video id="vod_obj" width="100%" height="240" controls="" style="margin-bottom: 50px;">
 	<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/movie.mp4" type="video/mp4">
 	<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/movie.ogg" type="video/ogg">
 	Your browser does not support the video tag.
 </video>
+<div id="playtime"></div>
+<script>    
+	var vod_control = document.getElementById("vod_obj");
+	vod_control.addEventListener("ended", event, false);
+	function event(){
+		console.log("미디어 재생이 완료되었습니다")
+	}
+
+
+	vod_control.addEventListener("timeupdate",playTime,false);
+	function playTime(){
+		document.getElementById("playtime").innerHTML =
+		"재생 상태 : " + Math.floor(vod_control.currentTime) + "/" + Math.floor(vod_control.duration);
+	}
+</script>
 ```
 
 -----
