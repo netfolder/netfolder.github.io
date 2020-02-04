@@ -11,6 +11,7 @@
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
 * image 사용법[【↓】](#image)
 * youtobe 이것저것[【↓】](#youtobe)
+* video tag[【↓】](#video)
 * radio btn custom [【↓】](#radio)
 
 -----
@@ -105,6 +106,24 @@ height :         calc(100% - 1px); /* for IE */
 ``` html
 //반복재생
 http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
+```
+
+-----
+
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+
+<a name='video'></a>
+## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)
+
+``` html
+//초기값
+<video width="320" height="240" controls="" style="margin-bottom: 50px;">
+	<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/movie.mp4" type="video/mp4">
+	<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/movie.ogg" type="video/ogg">
+	Your browser does not support the video tag.
+</video>
 ```
 
 -----
