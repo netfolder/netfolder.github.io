@@ -6,6 +6,7 @@
 	- 일부 글꼴 크기가 Safari (iPhone)에서 더 크게 렌더링 이슈 해결법[【→】](https://demun.tistory.com/2402)
 * px to vw calc[【→】](https://pxtovw.dev-calc.space/)
 * px to vw_calc page[【→】](https://netfolder.github.io/vw_calc.html)
+* web font 참고문서[【→】](https://wit.nts-corp.com/2017/02/13/4258)
 * comment[【↓】](#comment)
 * rollingPlugin[【↓】](#sample)
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
