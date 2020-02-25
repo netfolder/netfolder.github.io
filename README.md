@@ -166,6 +166,32 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">3</span></label></p>
 ```
 
+``` css
+.btn_area01{position: absolute;top:100px;left: 500px;font-size:0;}
+.btn_area01 > div{display:inline-block; position:relative; width:21px; height:21px;}
+.btn_area01 > div:last-child{margin-left:79px;}
+.btn_area01 div input[type="radio"]:checked + label{background-position:100% 0;}
+.btn_area01 div label{display:inline-block;width:96px;height:100%;background:url("http://image.tsherpa.co.kr/elementary/event/edu/200224/check_sprites.png") no-repeat 100% 100%;position:absolute;top:0;right:0;}			
+.btn_area01 div input{width:100%;height:100%;border:none;opacity:0;vertical-align:middle;}
+```
+
+``` html
+<div class="btn_area01">
+	<h3 style="font-size: 20px;">이미지 커스텀</h3>
+	<div class="agree">
+		<input type="radio" name="chk" id="agree" checked="checked">
+		<label for="agree"></label>								
+	</div>
+	<div class="disagree">
+		<input type="radio" name="chk" id="disagree">
+		<label for="disagree"></label>															
+	</div>
+</div>
+```
+
+
+
+
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
