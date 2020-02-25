@@ -161,6 +161,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 ```
 
 ``` html
+스타일 커스텀
 <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1" ><span class="circle">1</span></label></p>
 <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">2</span></label></p>
 <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">3</span></label></p>
@@ -176,6 +177,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 ```
 
 ``` html
+이미지 커스텀
 <div class="btn_area01">
 	<h3 style="font-size: 20px;">이미지 커스텀</h3>
 	<div class="agree">
