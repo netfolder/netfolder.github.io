@@ -168,33 +168,6 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 <p><label class="box-radio-input" for="inp1"><input name="col1" type="radio" id="inp1"><span class="circle">3</span></label></p>
 ```
 
-<a name='flip'></a>
-## css 플립효과 [(go)](https://netfolder.github.io/effect/css_flip.html)
-
-``` css
-.panel {position: relative;width: 200px;height: 200px;margin: 100px auto;}
-.card {position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;transition: all .5s; backface-visibility: hidden;}
-.front {z-index: 2;}
-.back {z-index: 1;transform: rotateY(-180deg);}
-.panel:hover .front {z-index: 1;transform: rotateY(180deg);}
-.panel:hover .back {z-index: 2;transform: rotateY(0deg);background-color: black;}
-```
-
-``` html
-<!-- IE10+, FF, Chrome, Safari, Opera -->
-<div class="panel">
-    <div class="front card">
-        <img src="http://placehold.it/200x200&text=front">
-    </div>
-    <div class="back card">
-        <img src="http://placehold.it/200x200/ff0&text=back">
-    </div>
-</div>
-```
-
-
-
-
 ``` css
 .btn_area01{position: absolute;top:100px;left: 500px;font-size:0;}
 .btn_area01 > div{display:inline-block; position:relative; width:21px; height:21px;}
@@ -219,7 +192,29 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 </div>
 ```
 
+<a name='flip'></a>
+## css 플립효과 [(go)](https://netfolder.github.io/effect/css_flip.html)
 
+``` css
+.panel {position: relative;width: 200px;height: 200px;margin: 100px auto;}
+.card {position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;transition: all .5s; backface-visibility: hidden;}
+.front {z-index: 2;}
+.back {z-index: 1;transform: rotateY(-180deg);}
+.panel:hover .front {z-index: 1;transform: rotateY(180deg);}
+.panel:hover .back {z-index: 2;transform: rotateY(0deg);background-color: black;}
+```
+
+``` html
+<!-- IE10+, FF, Chrome, Safari, Opera -->
+<div class="panel">
+    <div class="front card">
+        <img src="http://placehold.it/200x200&text=front">
+    </div>
+    <div class="back card">
+        <img src="http://placehold.it/200x200/ff0&text=back">
+    </div>
+</div>
+```
 
 
 -----
