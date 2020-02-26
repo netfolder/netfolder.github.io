@@ -169,7 +169,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 ```
 
 <a name='flip'></a>
-## radio btn custom[(go)](https://netfolder.github.io/effect/css_flip.html)
+## css 플립효과 [(go)](https://netfolder.github.io/effect/css_flip.html)
 
 ``` css
 .panel {position: relative;width: 200px;height: 200px;margin: 100px auto;}
