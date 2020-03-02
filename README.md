@@ -1,6 +1,7 @@
 
 # Table of Contents
 
+* 퍼블리싱가이드 [【→】](https://netfolder.github.io/p_guide)
 * css[【↓】](#css)
 	- sass문법[(보기)](https://github.com/netfolder/netfolder.github.io/tree/master/sass) ing..
 	- 일부 글꼴 크기가 Safari (iPhone)에서 더 크게 렌더링 이슈 해결법[【→】](https://demun.tistory.com/2402)
