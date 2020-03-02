@@ -1,8 +1,7 @@
 
 ## 퍼블리싱가이드
 
-* 프로젝트 환경 [【↓】](#PROJECT)
-* 퍼블리싱 작업 환경 및 크로스브라우징 범위 [【↓】](#VIEWPORT)
+* 퍼블리싱 작업 환경 및 크로스브라우징 범위 [【↓】](#PROJECT)
 * DOCTYPE [【↓】](#DOCTYPE)
 
 
@@ -13,16 +12,23 @@
 <br>
 <a name='PROJECT'></a>
 
-### 프로젝트
+#### 퍼블리싱 작업 환경 및 크로스브라우징 범위
 
-#### 환경
+1. 크로스브라우징 범위
+	- PC
+	- I.E 10 ~ 11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
 
-|  <center>구분</center> |  <center>내용</center> |
-|:--------|:--------:|
-| 문서 및 버전 | <center>cell 1x2 </center> |
-| 인코딩 | UTF-8 |
-| PC 웹 호환성 | <center>IE9이상, 크롬, 파이어폭스, 사파리</center> |
-| Mobile 웹 호환성 | <center>안드로이드 4.x 이상, IOS 9.x 이상, 사파리, 크롬 </center> |
+	- TABLET/MOBILE
+		아이패드3 , 갤럭시텝A[(보기)](https://www.samsung.com/sec/tablets/galaxy-tab-a-wifi-p580-with-s-pen/SM-P580NZKEKOO/#specs) , 갤럭시노트 2014[(보기)](https://www.samsung.com/sec/support/model/SM-P6000ZWEKOO/)
+
+2. 해상도B.P
+
+	- PC :  1,280px * 700px
+
+	- TABLET : 기준: 768px * 1,024px (iPad)
+	
+	- MOBILE : 기준:360px * 640px 갤s5~s7(s8/s9)
+
 
 #### 파일/폴더
 
@@ -61,31 +67,7 @@
 </table>
 
 ----------------------------------------------------------------------------------------
-<br>
-<br>
-<br>
-<a name='VIEWPORT'></a>
 
-### 퍼블리싱 작업 환경 및 크로스브라우징 범위
-
-1. 크로스브라우징 범위
-	- PC
-	- I.E 10 ~ 11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
-
-	- TABLET/MOBILE
-		아이패드3 , 갤럭시텝A[(보기)](https://www.samsung.com/sec/tablets/galaxy-tab-a-wifi-p580-with-s-pen/SM-P580NZKEKOO/#specs) , 갤럭시노트 2014[(보기)](https://www.samsung.com/sec/support/model/SM-P6000ZWEKOO/)
-
-2. 해상도B.P
-
-	- PC :  1,280px * 700px
-
-	- TABLET : 기준: 768px * 1,024px (iPad)
-	
-	- MOBILE : 기준:360px * 640px 갤s5~s7(s8/s9)
-	
-
-
-----------------------------------------------------------------------------------------
 <br>
 <br>
 <br>
@@ -101,10 +83,13 @@
 ```
 ##### HTML 일반
 ``` html
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 ##### HTML5
 ``` html
 <!doctype html>
 ```
+
+
+
 ----------------------------------------------------------------------------------------
