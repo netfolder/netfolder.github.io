@@ -70,10 +70,10 @@
 
 1. 크로스브라우징 범위
 	- PC
-	- I.E 10~11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
+	- I.E 10 ~ 11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
 
 	- TABLET/MOBILE
-		Chrome 50 ~ 70 최신, Safari 11 ~ 12 최신삼성인터넷 최신(기준 단말>갤럭시 기본브라우저 버전)
+		아이패드3 , 갤럭시텝A[(보기)](https://www.samsung.com/sec/tablets/galaxy-tab-a-wifi-p580-with-s-pen/SM-P580NZKEKOO/#specs) , 갤럭시노트 2014[(보기)](https://www.samsung.com/sec/support/model/SM-P6000ZWEKOO/)
 
 2. 해상도B.P
 
