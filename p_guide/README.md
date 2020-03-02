@@ -11,14 +11,14 @@
 
 #### 퍼블리싱 작업 환경 및 크로스브라우징 범위
 
-1. 크로스브라우징 범위
+-  ##### 크로스브라우징 범위
 	- PC
 	- I.E 10 ~ 11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
 
 	- TABLET/MOBILE
 		아이패드3 , 갤럭시텝A[(보기)](https://www.samsung.com/sec/tablets/galaxy-tab-a-wifi-p580-with-s-pen/SM-P580NZKEKOO/#specs) , 갤럭시노트 2014[(보기)](https://www.samsung.com/sec/support/model/SM-P6000ZWEKOO/)
 
-2. 해상도B.P
+- ##### 해상도B.P
 
 	- PC :  1,280px * 700px
 
@@ -27,7 +27,7 @@
 	- MOBILE : 기준:360px * 640px 갤s5~s7(s8/s9)
 
 
-#### 파일/폴더
+- ##### 파일/폴더
 
 <table>
     <thead>
@@ -74,24 +74,24 @@
 
 문서타입에 (X)HTML의 버전과 문서형을 지정하는데, 다양한 플랫폼 지원을 위해 XHTML 1.0 , 하위 브라우져 호환성을 위해 Transitional 모드를 권장하고 있다. (Transition 모드를 사용하더라도, 웹표준 준수율의 향상을 위해 가급적 Strict 모드의 문법을 사용하는 것을 권장함) 시스템 식별자를 명시하여 Standards 모드 방식으로 지원해야 하나 예외적으로 메일, 개별카페, 개별블로그 등의 UCC영역에 해당하는 서비스는 과거 비표준 태그 허용을 위해 Quirks 모드로 지원할 수 있다.
 
-##### XHTML 권장	
+- ##### XHTML 권장	
 ``` html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
-##### HTML 일반
+- ##### HTML 일반
 ``` html
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
-##### HTML5
+- ##### HTML5
 ``` html
 <!doctype html>
 ```
-##### 권장 기본 구조
+- ##### 권장 기본 구조
 ``` html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title> chunjae project title </title>
 </head>
 <body>
