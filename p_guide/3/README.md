@@ -39,6 +39,7 @@
 - 최상위 경로인 '/'를 이용해 루트상대경로로 작업 (ex: /include/css/base.css)
 - css 파일 위치는 '/include/css/' 으로 한다.
 - 아래 예시 이외의 필요 css는 같은 폴더 안에 생성한다.
+
     <table summary="css 파일의 폴더명, 파일명, 내용에 대한 예시">
         <caption class="show">css 파일구조와 경로의 예시</caption>
         <colgroup><col style="width:30%;">
@@ -80,6 +81,7 @@
 #### JS 파일
 - 최상위 경로인 '/'를 이용해 루트상대경로로 작업 (ex: /include/js/juqery.js)
 - js 파일 위치는 '/include/js/' 으로 한다.
+
     <table summary="js 파일의 폴더명, 파일명, 내용에 대한 예시">
         <caption class="show">js 파일구조와 경로의 예시</caption>
         <colgroup><col style="width:30%;">
@@ -112,6 +114,7 @@
 - 이미지 사이트에 업로드하고 절대경로로 작업
 - 이미지 파일 위치는 각 사이트명 (ex: /www/, /elementary/ 등)이고, 필요 시 추가 폴더를 생성한다.
 - 기본 이미지 폴더는 아래 예시에 있는 내용을 따르고, 그 외의 이미지는 1뎁스의 개발폴더명을 기준으로 폴더를 생성한다.
+
     <table summary="이미지 파일의 폴더명, 파일명, 내용에 대한 예시">
         <caption class="show">이미지 파일구조와 경로의 예시</caption>
         <colgroup><col style="width:30%;">
