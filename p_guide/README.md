@@ -70,10 +70,10 @@
 
 1. 크로스브라우징 범위
 	- PC
-	- I.E 10~11, Chrome 50.x ~ 70.x 최신, Edge 17.x 최신, Safari 11.x~12.x 최신 지원
+	- I.E 10~11, Chrome 50 ~ 70 최신, Edge 17 최신, Safari 11~12 최신 지원
 
 	- TABLET/MOBILE
-		Chrome 50.x ~ 70.x 최신, Safari 11.x ~ 12.x 최신삼성인터넷 최신(기준 단말>갤럭시 기본브라우저 버전)
+		Chrome 50 ~ 70 최신, Safari 11 ~ 12 최신삼성인터넷 최신(기준 단말>갤럭시 기본브라우저 버전)
 
 2. 해상도B.P
 
