@@ -14,6 +14,7 @@
 * image 사용법[【↓】](#image)
 * youtobe 이것저것[【↓】](#youtobe)
 * video tag[【↓】](#video)
+* video 진행중인 현재 시간대의 데이터 체크 하여 자막 활성[【↓】](#video2)
 * radio btn custom [【↓】](#radio)
 * css3 effect flip [【↓】](#flip)
 
@@ -144,6 +145,55 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 		"재생 상태 : " + Math.floor(vod_control.currentTime) + "/" + Math.floor(vod_control.duration);
 	}
 </script>
+```
+
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+<a name='video2'></a>
+## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)[(샘플보기)](https://netfolder.github.io/video/video_txt.html)
+
+![Alt text](video/video_stillcut.jpg)
+
+``` html
+//초기값
+<audio id="video" width="320" height="">
+	<source src="src/read_fun_all.mp3" type="audio/mp3">
+</audio>
+```
+
+```javascript
+var time_set = [
+	...
+	[],
+	[
+		1.000, 3.433,
+		"test",
+		"시험",
+	],
+	[
+		5.000, 7.433,
+		"Open the door, please.",
+		"문을 열어 주세요.",
+	]
+	...
+]
+	
+//진행시간대의 데이터를 체크해주는 부분
+var test_time = current.toFixed(3);
+var sum = time_set.reduce(function (pre, value , currentIndex , currentValue) {
+	console.log("=====>"  ,  (value[0] < test_time) && (test_time < value[1]) ) ;
+	if((value[0] < test_time) && (test_time < value[1]) ){
+		console.log(currentValue[currentIndex][2])
+		console.log(currentValue[currentIndex][3])
+		$(".txt_sample").html(currentValue[currentIndex][2] + "<br>" + currentValue[currentIndex][3]+ "<br> 강조된 문장 현재 인덱스 : " + currentIndex)
+	
+	}else if( (value[0] < test_time) && (test_time < value[1]) == false){
+			$(".txt_sample").html("자막이 없는 구간 !!!")
+
+	}
+});
 ```
 
 -----
