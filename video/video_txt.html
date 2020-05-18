@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <video-js id="myPlayerID"
+    data-video-id="4230322585001"
+    data-account="20318290001"
+    data-player="default"
+    data-embed="default"
+    data-application-id
+    class="video-js"
+    controls
+    width="640"
+    height="360">
+    <track kind="captions" src="https://solutions.brightcove.com/bcls/assets/captions/intro-vcs.vtt" srclang="en" label="English">
+    <track kind="captions" src="https://solutions.brightcove.com/bcls/assets/captions/intro-vcs-jp.vtt" srclang="ja" label="Japanese">
+    <track kind="captions" src="https://solutions.brightcove.com/bcls/assets/captions/intro-vcs-fr.vtt" srclang="fr" label="French">
+    </video-js>
+
+    <audio id="video" width="320" height="">
+       
+        <!-- <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/movie.mp4" type="video/mp4"> -->
+        <!-- <source src="src/sample2.mp4" type="video/mp4"> -->
+        <source src="src/read_fun_all.mp3" type="audio/mp3">
+    </audio>
+
+
+    <button type="button" id="play" class="btn_play">재생</button>
+    <button type="button" id="pause" class="btn_pause" style="display:none">일시정지</button>
+    <button type="button" id="stop" class="btn_stop">정지</button>
+    <button type="button" id="mute" class="btn_mute">음소거</button>
+    <button type="button" id="unmute" class="btn_vm" style="display:none">볼륨있음</button>
+    <button type="button" id="vmup" class="btn_vmup">볼륨UP</button>
+    <button type="button" id="vmdown" class="btn_vmdown">볼륨DOWN</button>
+    <button type="button" id="full" class="btn_fullscreen">전체화면</button>
+    <div id="currentTime" class="current_time">00:00</div>
+    <div id="totalTime" class="total_time">00:00</div>
+    <div id="progress" class="progress" style="width:300px; height:10px; background-color: #000;">
+        <div class="bar" id="progressBar" style="width:0%; height:100%; background-color: blue;"></div>
+    </div>
+
+<div class="txt_sample"></div>
+
+
+    <script>
+        /* 버튼 */
+        var video = document.getElementById("video");
+        var play = document.getElementById("play");
+        var pause = document.getElementById("pause");
+        var stop = document.getElementById("stop");
+        var timeCurrent = document.getElementById("currentTime");
+        var timeTotal = document.getElementById("totalTime");
+        var mute = document.getElementById("mute");
+        var unmute = document.getElementById("unmute");
+        var vmup = document.getElementById("vmup");
+        var vmdown = document.getElementById("vmdown");
+        var full = document.getElementById("full");
+        var progress = document.getElementById("progress");
+        var progressBar = document.getElementById("progressBar");
+        video.volume = 1;
+
+        /**
+        플레이어 함수 
+        **/
+
+        //재생일시정지함수
+        function playPause() {
+            if (video.paused) {
+                video.play();
+                play.style.display = "none";
+                pause.style.display = "inline-block";
+            } else {
+                video.pause();
+                play.style.display = "inline-block";
+                pause.style.display = "none";
+            }
+        }
+
+        //정지함수
+        function stopPlayer() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        //음소거토글함수
+        function mutePlayer(state) {
+            if (state == "mute") {
+                video.volume = 0;
+                mute.style.display = "none";
+                unmute.style.display = "inline-block";
+            } else if (state == "unmute") {
+                video.volume = 1;
+                mute.style.display = "inline-block";
+                unmute.style.display = "none";
+            }
+        }
+
+        //볼륨updown
+        function volumeUpDown(dir) {
+            if (dir == "up") {
+                if (video.volume == 1) {
+                    return false;
+                }
+                var change = video.volume + 0.1;
+                change = change.toFixed(1);
+                video.volume = parseFloat(change);
+                //console.log(video.volume);
+            } else if (dir == "down") {
+                if (video.volume == 0) {
+                    mute.style.display = "none";
+                    unmute.style.display = "inline-block";
+                    return false;
+                }
+                var change = video.volume - 0.1;
+                change = change.toFixed(1);
+                video.volume = parseFloat(change);
+                //console.log(video.volume);
+            }
+        }
+
+        //전체화면
+        function fullScreen() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+
+        //재생시간함수
+        function playTime() {
+            //총재생시간
+            video.addEventListener("durationchange", function () {
+                var duration = video.duration;
+                var durationmin = Math.floor(duration / 60);
+                var durationsec = Math.floor(duration - (durationmin * 60));
+                if (durationmin < 10) {
+                    durationmin = "0" + durationmin;
+                }
+                if (durationsec < 10) {
+                    durationsec = "0" + durationsec;
+                }
+                var durationTotal = durationmin + ":" + durationsec;
+                timeCurrent.innerHTML = durationTotal;
+            });
+            //현재재생시간
+            video.addEventListener("timeupdate", function () {
+                if (video.duration == video.currentTime) {
+                    play.style.display = "inline-block";
+                    pause.style.display = "none";
+                }
+                 /* 2020 */
+                var current = video.currentTime;
+                
+                var currentmin = Math.floor(current / 60);
+                var currentsec = Math.floor(current - (currentmin * 60));
+               
+                
+                timeCheck(current)
+                /* //2020 */
+
+
+                if (currentmin < 10) {
+                    currentmin = "0" + currentmin;
+                }
+                if (currentsec < 10) {
+                    currentsec = "0" + currentsec;
+                }
+                var currentTotal = currentmin + ":" + currentsec;
+                timeTotal.innerHTML = currentTotal;
+                
+            });
+        }
+
+        /* 2020 */
+        var temp_word_index=0;
+        function timeCheck(current){
+            console.log( current.toFixed(3)  );// 초로 환산
+            var time_set = [
+                [],
+                [
+                    1.000, 3.433,
+                    "test",
+                    "시험",
+                ],
+                [
+                    5.000, 7.433,
+                    "Open the door, please.",
+                    "문을 열어 주세요.",
+                ],
+                
+                [
+                    11.133, 12.733,
+                    "Close the door!",
+                    "문을 닫아!",
+                ],
+                [
+                    20.833, 21.867,
+                    "Look!",
+                    "봐!",
+                ],
+                [
+                    22.300, 23.900,
+                    "What’s that?",
+                    "저것이 무엇이니?",
+                ],
+                [
+                    23.767, 25.367,
+                    "It’s a star!",
+                    "그것은 별이야!",
+                ],
+                [
+                    26.467, 28.833,
+                    "Sit down, please.",
+                    "앉아 주세요.",
+                ],
+                [
+                    28.533, 29.600,
+                    "Okay.",
+                    "네.",
+                ],
+                [
+                    38.433, 39.867,
+                    "Good!",
+                    "잘했어요!",
+                ]
+            ];
+            //console.log(time_set[0][0]);//시작시간
+            //console.log(time_set[0][1]);//종료시간
+            //console.log(time_set[0][2]);//영문
+            //console.log(time_set[0][3]);//국문
+         
+            var test_time = current.toFixed(3);
+            var sum = time_set.reduce(function (pre, value , currentIndex , currentValue) {
+				//console.log(value[0] +" : "+ value[1] + " : " + currentIndex);			
+
+				console.log("=====>"  ,  (value[0] < test_time) && (test_time < value[1]) ) ;
+
+				if((value[0] < test_time) && (test_time < value[1]) ){
+                
+                    //console.log(currentIndex)
+                    console.log(currentValue[currentIndex][2])
+                    console.log(currentValue[currentIndex][3])
+                    $(".txt_sample").html(currentValue[currentIndex][2] + "<br>" + currentValue[currentIndex][3]+ "<br> 강조된 문장 현재 인덱스 : " + currentIndex)
+               
+                }else if( (value[0] < test_time) && (test_time < value[1]) == false){
+                     $(".txt_sample").html("자막이 없는 구간 !!!")
+
+                }
+			});
+
+
+            
+        }
+        
+        /* //2020 */
+
+
+        //프로그레스바
+        function progressPlayer() {
+            video.addEventListener("timeupdate", function () {
+                var max = Math.floor(video.duration);
+                var current = Math.floor(video.currentTime);
+                var percent = 100 * (current / max);
+                progressBar.style.width = percent + "%";
+               
+
+            });
+        }
+
+        //프로그레스바 seek
+        function seek(event) {
+            var seekTotal = parseInt(progress.style.width);
+            var seekX = event.offsetX;
+            var seekPercent = 100 * (seekX / seekTotal);
+            progressBar.style.width = seekPercent + "%";
+            var seekMove = (seekPercent / 100) * Math.floor(video.duration);
+            video.currentTime = seekMove;
+            
+        }
+
+        /* 함수실행 */
+        playTime();
+        progressPlayer();
+
+        /* 파이어폭스 이벤트 크로스브라우징코드 */
+        if (navigator.userAgent.indexOf("Firefox") >= 0) {
+            var eventNames = ["mousedown", "mouseover", "mouseout", "mousemove", "mousedrag", "click", "dbclick", "keydown", "keypress", "keyup"];
+            for (var i = 0; i < eventNames.length; i++) {
+                window.addEventListener(eventNames[i], function (e) {
+                    window.event = e;
+                }, true);
+            }
+        }
+
+        /* 이벤트 */
+        play.addEventListener("click", function () {
+            playPause();
+        });//재생
+
+        pause.addEventListener("click", function () {
+            playPause();
+        });//일시정지
+
+        stop.addEventListener("click", function () {
+            stopPlayer();
+        });//정지
+
+        mute.addEventListener("click", function () {
+            mutePlayer("mute")
+        });//음소거
+
+        unmute.addEventListener("click", function () {
+            mutePlayer("unmute")
+        })//볼륨있음
+
+        vmup.addEventListener("click", function () {
+            volumeUpDown("up");
+        });//볼륨업
+
+        vmdown.addEventListener("click", function () {
+            volumeUpDown("down");
+        });//볼륨다운
+
+        full.addEventListener("click", function () {
+            fullScreen();
+        });//풀스크린
+
+        progress.addEventListener("click", function () {
+            seek(event);
+        });//seek
+
+    </script>
+</body>
+
+</html>
