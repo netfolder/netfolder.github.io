@@ -152,7 +152,7 @@ http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID
 
 
 <a name='video2'></a>
-## video[(codepen)](https://codepen.io/alikerock/pen/LNRGde)[(샘플보기)](https://netfolder.github.io/video/video_txt.html)
+## video2[(샘플보기)](https://netfolder.github.io/video/video_txt.html)
 
 ![Alt text](video/video_stillcut.jpg)
 
