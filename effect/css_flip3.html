@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*cbox*/
+        .cbox{padding:15px; border-bottom:1px solid #dbdbdb; width: 300px;}
+        .cbox .cbox-tit{font-size: 20px; color:#2f7fa6;}
+        .cbox .cbox-desc{border-bottom:1px dashed #000; padding-bottom:15px; margin-bottom:15px; color:#878787;}
+        /*Rotate*/
+        .rotate{position: relative;}
+        /* 
+        perspective rotate 원근감
+        */
+        .rotate a{display: block; text-align: center; color:#fff; perspective: 600px; }
+        .rotate a .front{transform: rotateX(0deg) rotateY(0deg);transition: all 0.5s ease-in-out;backface-visibility: hidden;}
+        .rotate a .back{
+            background-color: #0093db;
+            width:100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: rotateX(0deg) rotateY(-180deg);
+            transition: all 0.5s ease-in-out;
+            z-index: -1;
+            backface-visibility: hidden; 
+        }
+        .rotate a:hover .front{transform: rotateX(0deg) rotateY(180deg);}
+        .rotate a:hover .back {transform: rotateX(0deg) rotateY(0deg); z-index: 1;}
+    </style>
+</head>
+<body>
+    <article class="cbox column7">
+        <h4 class="ir">반응형 사이트 오른쪽 컨텐츠1</h4>
+        <h4 class="cbox-tit">Rotate</h4>
+        <p class="cbox-desc">웹 퍼블리싱과 관련된 정보 공유 및 사이트 입니다.</p>
+        <!-- img1 -->
+        <figure class="img rotate">
+            <a href="#">
+                <div class="front">
+                    <img src="http://gifpng.com/220x304" alt="이미지">
+                </div>
+                <div class="back">									
+                    <figcaption><i class="far fa-angry" style="font-size: 45px;"></i>이미지에 대한 설명</figcaption>
+                </div>
+            </a>
+        </figure>
+        <!-- //img1 -->
+    </article>
+</body>
+</html>
