@@ -246,8 +246,7 @@ var sum = time_set.reduce(function (pre, value , currentIndex , currentValue) {
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 <a name='flip'></a>
-## css 플립효과 [(go)](https://netfolder.github.io/effect/css_flip.html)
-## css 플립효과2 [(go)](https://netfolder.github.io/effect/css_flip2.html)
+## css 플립효과 [(ex1)](https://netfolder.github.io/effect/css_flip.html)[(ex2)](https://netfolder.github.io/effect/css_flip2.html)
 
 ``` css
 .panel {position: relative;width: 200px;height: 200px;margin: 100px auto;}
