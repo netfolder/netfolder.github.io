@@ -16,6 +16,7 @@
 * video tag[【↓】](#video)
 * video 진행중인 현재 시간대의 데이터 체크 하여 자막 활성[【↓】](#video2)
 * radio btn custom [【↓】](#radio)
+* checkbox btn custom [【↓】](#checkbox)
 * css3 effect flip [【↓】](#flip)
 
 -----
@@ -244,6 +245,36 @@ var sum = time_set.reduce(function (pre, value , currentIndex , currentValue) {
 ```
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
+
+
+<a name='checkbox'></a>
+## checkbox btn custom[(go)](https://netfolder.github.io/radio/checkbox.html)
+
+
+``` css
+input[type=checkbox] { display:none; }
+input[type=checkbox] + label { 
+display: inline-block; 
+cursor: pointer; 
+line-height: 22px; 
+padding-left: 30px; 
+background: url('../btn/psg_input_check_off.png') left/22px no-repeat; 
+}
+input[type=checkbox]:checked + label { background-image: url('../btn/psg_input_check_on.png'); }
+```
+
+``` html
+이미지 커스텀
+<input type="checkbox" id="box1"><label for="box1">오늘 창을 열지 않음</label>
+```
+-----
+<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
+
 
 <a name='flip'></a>
 ## css 플립효과 [(ex1)](https://netfolder.github.io/effect/css_flip.html)[(ex2)](https://netfolder.github.io/effect/css_flip2.html)
