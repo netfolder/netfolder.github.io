@@ -247,10 +247,6 @@ var sum = time_set.reduce(function (pre, value , currentIndex , currentValue) {
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
 
 
------
-<div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
-
-
 
 <a name='checkbox'></a>
 ## checkbox btn custom[(go)](https://netfolder.github.io/radio/checkbox.html)
