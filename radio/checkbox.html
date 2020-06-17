@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radio btn custom</title>
+    <style>
+
+
+       input[type=checkbox] { display:none; }
+        input[type=checkbox] + label { 
+        display: inline-block; 
+        cursor: pointer; 
+        line-height: 22px; 
+        padding-left: 30px; 
+        background: url('http://image.tsherpa.co.kr/common/btn/psg_input_check_off.png') left/22px no-repeat; 
+        }
+        input[type=checkbox]:checked + label { background-image: url('http://image.tsherpa.co.kr/common/btn/psg_input_check_on.png'); }
+    </style>
+</head>
+<body>
+    <h3 style="font-size: 20px;">스타일 커스텀</h3>
+    
+    <input type="checkbox" id="box1"><label for="box1">오늘 창을 열지 않음</label>
+    
+</body>
+</html>
