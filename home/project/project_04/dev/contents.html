@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- cmtool 하단 상품 운영시 jquery 는 주석처리한후 업로드 한다 -->
+    <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+
+    <title>옥션 - 프로모션명a</title>
+    <style>
+        *{padding: 0; margin:0; border: 0;}
+        .inc-obj{position: relative; width:980px; margin: 0 auto;}
+        #p_wrapper{position:relative; width:980px; height: 467px; line-height: 0px;}
+        #p_wrapper img{vertical-align: top; line-height: 0px;}
+        #p_contents{position: relative; width:100%;}
+        .btn{position: absolute; width:100%; text-align: center; bottom:60px;}
+        .con1{position: absolute; left:411px; top:210px; }
+        .con1 ul{ overflow: hidden;}
+        .con1 ul li{margin-bottom: 31px; list-style: none;}
+        
+        .con2{position: absolute; left:844px; top:210px; }
+        .con2 ul{ overflow: hidden;}
+        .con2 ul li{margin-bottom: 31px; list-style: none;}
+        
+    </style>
+   <script>
+       
+       var temp = -1;
+       $(document).ready(function(){
+           $(".obj").each(function (index) {
+                var $this = $(this)
+                $this.click(function () {                    
+                    selectMenu(index)
+                })
+            })
+
+            function selectMenu(n) {
+                if (temp != -1) {
+                    var off = $(".obj").eq(temp).find("img").attr("src").replace(/_on.jpg/, "_off.jpg")
+                    $(".obj").find("img").eq(temp).attr("src", off)
+                }
+                var on = $(".obj").eq(n).find("img").attr("src").replace(/_off.jpg/, "_on.jpg")
+                $(".obj").find("img").eq(n).attr("src", on)
+                temp = n
+            }
+       })
+       
+        
+    </script>
+</head>
+
+<body>
+    <div id="p_wrapper">
+       
+        <div id="p_contents">
+            <!--좌측영역-->
+            <div class="con1">
+                <ul>
+                    <li>
+                        <a class="obj" href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/wbtn_off.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a class="obj" href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/wbtn_off.jpg" alt=""></a>
+                    </li>                    
+                </ul>
+            </div>
+            
+            <!--우측영역-->
+            <div class="con2">
+                <ul>
+                    <li>
+                        <a class="obj" href="javascript:;"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/wbtn_off.jpg" alt=""></a>
+                    </li>                   
+                </ul>
+            </div>
+            
+            
+            
+            <a class="btn" href="#"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/evte_btn_0724.png" alt="원하는 지점 선택 후 응모하기"></a>
+            <img src="http://eventimg.auction.co.kr/md/auction/093E821325/evte_content_img_0724.jpg" alt="">
+        </div>
+       
+    </div>
+</body>
+</html>

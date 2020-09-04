@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+		<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+		<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jquery.easing-1.3.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+		<script src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jQueryRotate.2.2.js"></script>
+
+
+		<title>auction</title>
+		<style>
+			*{padding: 0; margin:0; border: 0;}
+			#p_wapper{position:relative; width:686px; height: 257px; /*overflow: hidden;*/ line-height: 0px;}
+			#p_wapper img{vertical-align: top; line-height: 0px;}
+			.start{position: absolute; left: 0px; top:0px; z-index: 100}
+			.clickArea{position: absolute; top:0px; z-index: 99;}
+			.mc{position: absolute; top:0px; left: 0px;}
+			.scene1{z-index: 1}
+			.scene2{z-index: 2}
+			.scene3{z-index: 3}
+			.scene4{z-index: 4}
+			.scene5{z-index: 5}
+			.scene6{z-index: 6}
+			.scene7{z-index: 7}
+			.scene8{z-index: 8}
+			.sceneEnd{position: absolute; top:0px; left: 0px; z-index: 9;}
+			.obj{position: absolute; left:283px; top:38px; z-index: 202; }
+			.obj2{position: absolute; left:0px; top:0px;}
+			.popup{position: absolute; z-index: 1000; top:-257px;}
+			
+			.boxArea{position: absolute; width:200px;  top:274px;  z-index: 99999999}
+			#selectbox{position: absolute; width:130px; height:30px; border:1px solid black; font-size: 15px; left:119px; top:-12px;}
+		</style>
+
+		<script>
+			//작동순서- >  1.로그인체크  2.게임참여여부 3.게임스타트 4.결과값으로팝업 호출
+
+			var isLogin = "y"; // y : 로그인 상태  , n : 로그아웃 상태
+			var isGameJoin="n"; // y : 참여한상태   , n : 참여하지 않은상태
+			var good=1;
+			// good 는 1에서 6까지 값  아래 순서대로
+			// good = 1 - >10포인트
+			// good = 2 - >100포인트
+			// good = 3 - >500포인트
+			// good = 4 - >10%할인쿠폰
+			// good = 5 - >1000원쿠폰폰
+			// good = 6 - >꽝
+
+			var scene_total;
+			var $mc;
+			var count=0;
+			var time=-1;
+			var isload = false
+
+			function goLogin(){
+				alert("goLogin 로그인페이지 팝업")		
+			}
+			function gamePlayed(){
+				alert("오늘은 이미 게임에 참여하였습니다.")
+			}
+			function popPoint() {
+				alert("나의 포인트 보기")
+				//window.open("http://reward.auction.co.kr/MyPoint/PointList.aspx", "pointWin");
+			}
+			window.onload = function(){
+				isload = true;	
+			}
+
+			//스타트 버튼 클릭시
+			function start(){
+				if(isload == false) return;
+				if (isLogin == "n" || isLogin == "N") {
+					goLogin()
+					return;
+				} else {
+					if (isGameJoin == "y" || isGameJoin == "Y") {
+						// 오늘 게임참여했다면	
+						gamePlayed()
+
+						return;
+					} else {
+						$mc = $(".mc")
+						scene_total = $mc.length;
+						$(".clickArea").css("z-index" ,"101")
+						good = $("#selectbox option:selected").val();
+					}
+				}
+
+			}
+			//에니메이션 스타트
+			function animation(){
+				var delayNum = 100;
+				time = setInterval(function(){
+
+					if(count <= scene_total - 1){
+						count ++
+						var gab_zIndex= 102 + count;
+						$mc.eq(count-1).css("z-index", gab_zIndex)
+						//console.debug(count)
+					}else{
+						//console.debug("end")
+						clearInterval(time)	
+						animationEnd()
+					}
+				},delayNum)
+			}
+			function animationEnd(){
+				$(".sceneEnd").css("z-index", 200)
+				$(".obj").animate({top: "214px" , left:"283px" }, 1000,  "easeOutBounce"  , function(){
+					popupOpen(good)
+				} );
+
+				$(".obj2 img").rotate({
+					animateTo : 380,
+					duration : 800 ,
+					callback : function() {}
+				})
+			}
+			function popupOpen(good){
+				$(".popup").eq(good-1).animate({top: "0px" } , 500 ,"easeInOutQuint")	
+			}
+			function popClose(){
+				$(".popup").animate({top:"-257px"} , 500 ,"easeInOutQuint")	
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<div id="p_wapper">
+		
+			<div class="boxArea">
+				result : <select id="selectbox" name="fruit"> 
+				<option value="1">10 point</option>
+				<option value="2">100point</option>
+				<option value="3">500point</option>
+				<option value="4">10% sale coupon</option>
+				<option value="5">1000 coupon</option>				
+				</select>
+			</div>
+			<div class="start">
+				<a href=""><img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/game_start.jpg" alt="" usemap="#Map" border="0">
+					<map name="Map" id="Map">
+						<area shape="rect" coords="232,84,453,188" href="javascript:start();" />
+					</map>
+				</a>
+			</div>
+
+			<div class="clickArea">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/game_click.jpg" alt="" usemap="#Map2" border="0">
+				<map name="Map2" id="Map2">
+					<area shape="rect" coords="368,80,532,244" href="javascript:animation()" />
+				</map>
+			</div>
+			<!--scene-->
+			<div class="scene1 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_1.jpg" alt="">
+			</div>
+			<div class="scene2 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_2.jpg" alt="">
+			</div>
+			<div class="scene3 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_3.jpg" alt="">
+			</div>
+			<div class="scene4 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_4.jpg" alt="">
+			</div>
+			<div class="scene5 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_5.jpg" alt="">
+			</div>
+			<div class="scene6 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_6.jpg" alt="">
+			</div>
+			<div class="scene7 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_7.jpg" alt="">
+			</div>
+			<div class="scene8 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_8.jpg" alt="">
+			</div>
+			<div class="scene7 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_7.jpg" alt="">
+			</div>
+			<div class="scene8 mc">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_8.jpg" alt="">
+			</div>
+			<div class="sceneEnd">
+				<div class="obj">
+					<div class="obj2"><img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/obj.png" alt=""></div>
+				</div>
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/scene_9.jpg" alt="">
+			</div>
+
+			<!-- 팝업 관련 -->
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_10point.png" alt="10포인트" usemap="#Map3" border="0">
+				<map name="Map3" id="Map3">
+					<area shape="rect" coords="339,150,429,178" href="javascript:popPoint();" />
+					<area shape="rect" coords="316,196,373,217" href="javascript:popClose()" />
+				</map>
+			</div>
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_100point.png" alt="100포인트" usemap="#Map4" border="0">
+				<map name="Map4" id="Map4">
+					<area shape="rect" coords="337,152,432,177" href="javascript:popPoint();" />
+					<area shape="rect" coords="314,196,372,218" href="javascript:popClose()" />
+				</map>
+			</div>
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_500point.png" alt="500포인트" usemap="#Map5" border="0">
+				<map name="Map5" id="Map5">
+					<area shape="rect" coords="340,152,431,176" href="javascript:popPoint();" />
+					<area shape="rect" coords="316,196,372,217" href="javascript:popClose()" />
+				</map>
+			</div>
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_10percentSale.png" alt="10%" usemap="#Map6" border="0">
+				<map name="Map6" id="Map6">
+					<area shape="rect" coords="350,153,430,176" href="javascript:popPoint();" />
+					<area shape="rect" coords="317,196,371,218" href="javascript:popClose()" />
+				</map>
+			</div>
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_1000won.png" alt="1000원 할인" usemap="#Map7" border="0">
+				<map name="Map7" id="Map7">
+					<area shape="rect" coords="351,154,431,177" href="javascript:popPoint();" />
+					<area shape="rect" coords="316,196,373,219" href="javascript:popClose()" />
+				</map>
+			</div>
+			<div class="popup">
+				<img src="http://eventimg.auction.co.kr/md/auction/0401DEE9C1/pop_fale.png" alt="꽝" usemap="#Map8" border="0">
+				<map name="Map8" id="Map8">
+					<area shape="rect" coords="313,196,373,219" href="javascript:popClose()" />
+				</map>
+			</div>
+
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

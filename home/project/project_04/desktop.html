@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>project_04</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+		<script src="http://eventimg.auction.co.kr/md/auction/086A428A1C/jquery.easing.1.3.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0; border:0;}
+			li{list-style:none;}
+			img{border:0;}
+			.inc-obj{position: relative; width:980px; margin:0 auto;}
+			.body_w980{z-index:998;position:relative;}
+			#p_wrapper{width:100%;text-align:center;max-width:1920px;min-width: 980px;margin:0 auto;}
+			#p_wrapper *{font-family:/*'Noto Sans KR',*/"맑은 고딕",Roboto, Droid Sans, Helvetica, AppleSDGothicNeo, 'Apple SD 산돌고딕 Neo', Apple-Gothic, '애플고딕', 'Tahoma', 'dotum', '돋움', 'gulim', '굴림', sans-serif;}
+			#p_wrapper img{vertical-align:top;}
+			#p_wrapper .inner{width:980px;margin:0 auto;position:relative;}
+			/*#p_header{position:relative;background:#000;background: url(http://eventimg.auction.co.kr/md/auction/093E821325/w_bg_top.jpg) no-repeat 50% 0;}		*/
+			#p_header{position:relative;background:#000;background: url(http://eventimg.auction.co.kr/md/auction/093E821325/w_bg_top_170601.jpg) no-repeat 50% 0;}
+			#p_header #p_share{position:absolute;top:30px;right:50%;margin-right:-460px;width:56px;z-index: 100}
+			#p_wrapper .blind{display:none}
+			#p_navi{width:100%;height:66px;position:relative;z-index:300;background-color: #f4f4f4}
+			#p_navi_area{height:66px;z-index:10;background:url(http://eventimg.auction.co.kr/md/auction/08474515E3/bg_navi_shadow.png) left bottom repeat-x;}
+			#p_navi_cnt{height:64px;z-index:10;background:#f4f4f4;border-bottom:2px solid #e6e6e6;}
+			#p_navi_cnt ul{width:980px;margin:0 auto;overflow:hidden;}
+			#p_navi_cnt ul li{width:326px;float:left;text-align:center;height:64px;overflow:hidden;text-align: center}
+			#p_navi_cnt ul li.on img{margin-top:-64px;}
+			.inner .btn_wrap{width: 420px;margin:0 auto;overflow: hidden;}
+			.inner .btn_wrap .ifr_coupon{float:left;}
+			.inner .btn_wrap .btn_reserve{float:right;}
+			#p_main{border-top:3px solid #e2e2e2;}
+			/*#p_sec1,#p_sec3{background-color: #f4f4f4}*/
+			/*		#p_sec1 .inner,
+			#p_sec2 .inner,
+			#p_sec3 .inner{border-top:1px solid #ababab;}*/
+			#p_cgc .mv_con{position: relative;}
+			#p_cgc .mv_con .mv_area{position: absolute;top:0;left:0;width: 100%;text-align:center}
+			#p_cgc .intro{padding-bottom:63px;background: #fbfadc}
+			#p_preview{position: relative;border-bottom:1px solid #f4f4f4;}
+			#p_preview .mv{width: 980px;margin:0 auto;position: relative;}
+			#p_preview .mv .mv_con{width: 608px;height: 342px;position: absolute;top:0;left:50%;margin-left:-304px;background: #000}
+			#p_preview .mv .btn_enter{position: absolute;top:372px;left:0;width: 100%;}
+			.fixed{position:fixed;top:0px;left:0;width:100%;margin:0;z-index:100;}
+			#layerWrap2{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;}
+			#layerWrap2 #layerPopCouponType{position:absolute; z-index:2; left:50%; top:50%; z-index:9999;}
+			#layerWrap2 #dimmed{position:absolute;left:0%;top:0%;width:100%;height:100%;background:#000;opacity:0.5;z-index:1;filter: alpha(opacity:'50');z-index:9999;}
+			.previewArea{position: relative; width:100%; line-height: 0;}
+			.previewArea img{vertical-align: top; line-height: 0;}
+		</style>
+		<script>
+			<!--
+				function layPopHide() {
+				$("#layerWrap2,#layerWrap").css("display", "none");
+				$("#layerPopCouponType").remove();
+			}
+			var naviH;
+			$(document).ready(function(){
+
+				naviH = $("#p_navi").height();
+				// when scroll
+				$(window).scroll(function(){
+					var num = 0;
+					var aboveHeight = $("#p_navi").offset().top;
+					var menuPos = new Array;
+					var menuLength = $("#p_navi_area li").length-1;
+					locate = $(window).scrollTop()+0;
+					locate2 = $(window).scrollTop()+0+naviH; 
+					//scrolled down header's height
+					if (locate >= aboveHeight){
+						$("#p_navi_area").addClass('fixed');
+					} else {
+						$("#p_navi_area").removeClass('fixed');
+					}
+					$("#p_navi_area li").each(function(i){
+						menuPos[i] = $($("#p_navi_area li:eq("+i+") a").attr("href")).offset().top;
+						$("#p_navi_area li:eq("+i+")").removeClass("on");
+					});
+					if(locate2 < menuPos[1]){
+						num = 0
+					} else if(locate2 < menuPos[2]){
+						num = 1
+					} else {
+						num= menuLength;
+					}
+					$("#p_navi_area li:eq("+num+")").addClass("on");
+				});
+				$("#p_navi_area ul li a").click(function(){
+					winHeight = $(window).scrollTop();
+					var iElm = $(this).attr("href");
+					var iElmPos = $(iElm).offset().top+50;
+					if(winHeight <= 45){
+						$('html, body').stop().animate({ scrollTop: iElmPos-45-naviH }, "slow");
+					} else {
+						$('html, body').stop().animate({ scrollTop: iElmPos-0-naviH }, "slow");
+					}
+					return false;
+				})
+			})
+			function playMv(){
+				var $this = $("#p_preview .mv .mv_con");			
+				var mvurl = $this.attr("data-youtube-url");
+				$this.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+mvurl+'?wmode=transparent&rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+			}
+			function GetSearchQuery(strName){
+				var oLocation = location.href;
+				if(oLocation.indexOf('?') > 0){
+					var strUri = oLocation.split('?');
+					var strParam = strUri[1].split('&');
+					for(var i=0; i<strParam.length; i++){
+						if(strParam[i].indexOf('=') > 0){
+							var strQuery = strParam[i].split('=');
+							// 0에는 parameter 이름, 1에는 값이 저장된다.
+							if(strQuery[0] == strName) return strQuery[1];
+						}
+					}
+				}
+				return -1;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<div id="layerWrap2" class="fixed" style="display:none;">
+			<div id="dimmed"></div>
+		</div>
+		<div id="p_wrapper">
+			<div id="p_header">
+				<!-- <img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_top_title_170601.png" alt=""> -->
+				<img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_top_title.png" alt="">
+				<div id="p_share">
+					<!-- dev -->
+					<iframe src="http://eventv2.auction.co.kr/Event3/2016/05/67/EDRA520_BOOKSNS/sns.aspx?GROUPID=20170210" width="56" id="shareFrame" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>	
+			</div>
+			<div id="p_navi">
+				<div id="p_navi_area">
+					<div id="p_navi_cnt">
+						<!-- 옥션혜택 + 시사회 -->
+						<ul>
+							<li><a href="#p_reserve"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_nav1.gif" alt=""></a></li>
+							<li><a href="#p_sec1"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_nav2.gif" alt=""></a></li>
+							<li><a href="#p_sec3_1"><img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_nav3_0510.gif" alt=""></a></li>
+						</ul> 
+					</div>
+				</div>
+			</div>
+			<div id="p_container">
+				<div id="p_reserve">
+					<div class="inner">
+						<!-- dev -->
+						<iframe src="http://eventv2.auction.co.kr/Event3/2017/01/17/EDRA1175_CGV/ifrmRealtime.aspx" width="980" height="1118" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+				</div>
+				<div id="p_sec1">
+					<div class="inner">
+						<iframe src="http://eventv2.auction.co.kr/Event3/2017/05/17/EDRA1752_CGV/ifrmApply1.aspx" width="980" height="1110" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+				</div>
+				<div id="p_sec2">
+					<div class="inner">
+						<iframe src="http://eventv2.auction.co.kr/Event3/2017/01/17/EDRA1175_CGV/ifrmApply2.aspx" width="980" height="1110" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+				</div>
+				<div id="p_sec3">
+					<div class="inner">
+						<iframe src="http://eventv2.auction.co.kr/Event3/2017/05/17/EDRA1752_CGV/ifrmApply3.aspx" width="980" height="970" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+				</div>
+				<!--시사회-->
+				<div class="previewArea rel" id="p_sec3_1">
+					<div class="inc-obj">
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/cgv_poster.jpg" alt="">
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/preview_tit_0724.jpg" alt="">
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/preview_img_0724_01.jpg" alt="">
+						<div class="video rel">
+							<iframe style="position: absolute; left:186px; z-index: 100; " width="609" height="342" src="http://www.youtube.com/embed/cVo2mKsDDqg?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
+							<img src="http://eventimg.auction.co.kr/md/auction/093E821325/preview_video_bg_0724.jpg" alt="">
+						</div>
+						<iframe  src="http://eventv2.auction.co.kr/Event3/2017/07/67/EDRA1951_CGV/IfrmChoice.aspx" width="980" height="467"  scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/preview_notice1_0724.jpg" alt="">
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/preview_notice2_0724.jpg" alt="">
+					</div>
+				</div>   
+				<div id="p_sec4">
+					<h3><img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_sec4_tit.gif" alt=""></h3>
+					<div class="inner">
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_sec4_img1.jpg" alt="">
+						<div>
+							<a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B395881741" target="_blank">
+								<img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_btn_buy.png" alt="구매하기">
+							</a>
+						</div>
+						<img src="http://eventimg.auction.co.kr/md/auction/093E821325/w_sec4_notice.gif" alt="">					
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
