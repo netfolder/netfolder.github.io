@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head lang="ko">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>웹룰렛</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+		<script src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jQueryRotate.2.2.js"></script>
+		<style>
+			*{
+				border:0;
+				margin:0;
+				padding:0;
+			}
+			#wrapper {
+				position: relative;
+				overflow: hidden;
+				width: 980px;
+				height: 800px;
+				background: url('images/r_rollet_bg.jpg') no-repeat 0 0;
+			}
+			#wrapper .roul-btn {
+				position: absolute;
+				top: 200px;
+				left: 380px;
+				z-index: 199;
+			}
+			#wrapper .roul-pin {
+				position: absolute;
+				top: 22px;
+				left: 475px;
+				z-index: 199;
+			}
+			#wrapper #rotate-img {
+				margin: 40px 0 0 218px;
+			}
+			#wrapper #rotate-result-img {
+				position: absolute;
+				top: 80px;
+				left: 40px;
+				z-index: 9999;
+			}
+			#layerWrap{position:absolute;top:0;left:0;width:100%;height:100%;z-index:200;}
+			#layerWrap #layerPopCouponType{position:absolute;left:260px;top:150px; width:200px; height:200px;z-index:9999;}
+			.boxArea{position: absolute;}
+			#selectbox{position: absolute; width:100px; height:30px; border:1px solid black; font-size: 15px; left:119px; top:0px;}
+		</style>
+		<script>
+			var isLogin="y"; // 로그인
+			var isGameJoin = "n"; //참여가능상태 // 게임 참여여부
+			var chance = 3; // 당첨번호 1~5 의당첨번호
+			/*
+				chance = 1     10%
+				chance = 2     50%
+				chance = 3     20%
+				chance = 4     30%
+				chance = 5     무료배송
+
+			*/
+			if(chance == 4){
+				isView = 8
+			}else{
+				isView = chance	
+			}
+
+
+			var panSlice = 12;
+			// 12조각
+			function gameStart() {
+
+				if (isLogin == "n" || isLogin == "N") {
+					loginGo()
+					return;
+				} else {
+					if (isGameJoin == "y" || isGameJoin == "Y") {
+						// 게임참여했다면
+
+						noGameJoin()
+
+						return;
+					} else {
+						// gameMotion()
+						isGameJoin = "y"
+						panMotion()
+					}
+				}
+			}
+
+			function panMotion() {
+				isView = $("#selectbox option:selected").val();
+				
+
+				var n = ((360 / panSlice) * isView) + (360 / panSlice) / 2;
+				// 360/조각수
+				// setdata넘어온값
+				// +중간값
+				$("#rotate-img").rotate({
+					animateTo : (360 * 7) + n,
+					duration : 4500 ,
+					callback : function() {
+						//alert("결과호출  : "  +  isView)
+						layPopShow(isView)
+					}
+				})
+			}
+			// ////////
+			function loginGo() {
+				alert("로그인 해주세요 :: 로그인 팝업 ")
+			}
+
+			function noGameJoin() {
+				//alert("오늘은 이미 게임에 참여 했습니다.  ")
+				layPopShow(6)
+			}
+
+			function layPopShow(num){
+
+				$("#layerWrap").show();
+				if (num == 1){				
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/10per.jpg" /></a></div>');
+				} else if (num == 2){
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/50per.jpg" /></a></div>');
+				} else if (num == 3){
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/20per.jpg" /></a></div>');	
+				} else if (num == 8){
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/30per.jpg" /></a></div>');
+				} else if (num == 5){
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/r_free_pop.jpg" /></a></div>');
+				} else if (num == 6){
+					$("#layerWrap").append('<div id="layerPopCouponType"><a href="javascript:;" onclick="layPopHide()"><img src="images/r_complete_pop.jpg" /></a></div>');
+				}
+			}  
+			function layPopHide(){
+				$("#layerWrap").hide();
+				$("#layerPopCouponType").remove();
+
+			}      
+		</script>
+	</head>
+
+	<body>
+		<div id="layerWrap" style="display:none;"></div>
+
+		<div id="wrapper">
+			
+			<div class="boxArea">
+				당첨결과 선택 : <select id="selectbox" name="fruit"> 
+					<option value="1">10%</option>
+					<option value="3">20%</option>
+					<option value="8">30%</option>
+					<option value="2">50%</option>
+					<option value="5">무료배송</option>				
+				</select>
+			</div>
+			<div class="roul-pin">
+				<img src="images/r_arr.png" alt="">
+			</div>
+			<div class="roul-btn">
+				<a href="javascript:gameStart();"><img src="images/r_startbtn.png" alt="스타트" border="0"></a>
+			</div>
+			<div>
+				<img id="rotate-img" src="images/r_roul_img.png" alt="">
+			</div>
+
+		</div>
+	</body>
+</html>
