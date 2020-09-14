@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body,#wrap{min-height:100%; height:100%;}
+        a {text-decoration: none;}
+        *{padding:0; margin:0}
+
+        .dragContainer{position:relative; width:100%; background:#f9f9f9;}
+        .draggable{display: inline-block; width:50px; height:50px; background:black;text-align:center; line-height:50px;}
+        .drag_area{position: fixed; bottom:50px; right:50px;}
+        .drag_area .d_menu{position: relative; display: block; width:100%; height:100%; color: #fff; font-size: 50px; line-height:40px; z-index: 10;}
+        .drag_area .menus{border:1px solid blue; position: absolute;top:0px; width:50px; height:50px; z-index: 5;  box-sizing: border-box; transition: all 0.25s ease-in-out; }
+        .drag_area .menus a{display: block;}
+             
+        .drag_area.down.on .menus.m1{top:50px}
+        .drag_area.down.on .menus.m2{top:100px}
+        .drag_area.down.on .menus.m3{top:150px}
+        .drag_area.up.on .menus.m1{top:-50px}
+        .drag_area.up.on .menus.m2{top:-100px}
+        .drag_area.up.on .menus.m3{top:-150px}
+    </style>
+</head>
+<body>
+    <div id="wrap" class="dragContainer">   
+        <!--  클릭여부 on , class up 메뉴 방향 -->
+        <div class="draggable drag_area">
+            <a href="#" class="d_menu">+</a>
+            <div class="menus m1"><a href="#1">1</a></div>
+            <div class="menus m2"><a href="#2">2</a></div>
+            <div class="menus m3"><a href="#3">3</a></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script>
+
+        $(function () {
+            var wrap_height_half;
+            $( ".draggable" ).draggable({
+                start:function(event, ui ) {
+                    //console.log("start")
+                    $( ".draggable" ).addClass("draging")
+                },     
+                containment:".dragContainer"//영역 한정 드레그
+            });
+            $( ".dragContainer" ).droppable({
+                drop: function( event, ui ) {             
+                    wrap_height_half = warp_half();  
+                    setTimeout(function(){
+                        $( ".draggable" ).removeClass("draging");
+                        menu_transfrom()
+                        console.log("draging 드레그중 제거")
+                    },5)
+                }
+            });
+            // wrap 높이 / 2
+            function warp_half(){
+                var wh = $( ".dragContainer" ).height() / 2
+                return wh;
+            }
+            function menu_transfrom(){
+                //메뉴 위치 변경 관련
+                console.log("메뉴위치변경")
+                if($(".drag_area").hasClass("on")){
+                if($(".draggable").position().top > wrap_height_half){
+                    console.log("메뉴가 하단에 위치할때 up")
+                    $(".draggable").removeClass("down").addClass("up")
+                }else{
+                    console.log("메뉴가 상단에 위치할때 up x")
+                    $(".draggable").removeClass("up").addClass("down")
+                }
+            }
+            }
+            $(window).load(function(){
+                wrap_height_half = warp_half();
+                //console.log(wrap_height_half)
+            })
+            $(window).resize(function(){
+                wrap_height_half = warp_half();
+                //console.log(wrap_height_half)
+            })
+            //메뉴 더보기 클릭시
+            $(".d_menu").off("click").on('click', function() {
+                if(!$(".draggable" ).hasClass("draging")){
+                    console.log("click")
+                    $(".drag_area").toggleClass("on")
+                }else{
+                    console.log("드레그중")
+                }
+                menu_transfrom()
+            })
+           
+            
+        });
+    </script>
+</body>
+</html>
