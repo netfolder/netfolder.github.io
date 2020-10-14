@@ -12,7 +12,7 @@
 * rollingPlugin[【↓】](#sample)
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
 * image 사용법[【↓】](#image)
-	- img tag srcset ( ie 대응 )[(보기)](https://netfolder.github.io/img_srcset/test.html)
+	- img tag srcset ( ie 대응  )[(보기)](https://netfolder.github.io/img_srcset/test.html)
 * youtobe 이것저것[【↓】](#youtobe)
 * video tag[【↓】](#video)
 * video 진행중인 현재 시간대의 데이터 체크 하여 자막 활성[【↓】](#video2)
