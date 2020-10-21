@@ -73,7 +73,9 @@ height :         calc(100% - 1px); /* for IE */
 	* 3G망을 이용하는 유저를 고려하여 용량 축소가 중요하다.
 	* PNG-8 포맷을 기본으로 저장하며, 색상 수가 많거나 반투명 효과가 있으면 PNG-24를 사용한다.
 	* 용량 대비 이미지 품질을 고려하여 포맷을 변경할 수도 있다.
-
+	
+* TTF(True Type Font) : 일반 문서작업에 적합합니다.( 웹작업 )
+* OTF(Open Type font) : 그래픽 디자인 출력에 적합합니다.
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
