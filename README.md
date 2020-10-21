@@ -8,6 +8,8 @@
 * px to vw calc[【→】](https://pxtovw.dev-calc.space/)
 * px to vw_calc page[【→】](https://netfolder.github.io/vw_calc.html)
 * web font 참고문서[【→】](https://wit.nts-corp.com/2017/02/13/4258)
+	- TTF(True Type Font) : 일반 문서작업에 적합합니다.( 웹작업 )
+	- OTF(Open Type font) : 그래픽 디자인 출력에 적합합니다.
 * comment[【↓】](#comment)
 * rollingPlugin[【↓】](#sample)
 * fixedNavigation(반응형 대응)[【↓】](#fixedNavigation)
@@ -74,8 +76,7 @@ height :         calc(100% - 1px); /* for IE */
 	* PNG-8 포맷을 기본으로 저장하며, 색상 수가 많거나 반투명 효과가 있으면 PNG-24를 사용한다.
 	* 용량 대비 이미지 품질을 고려하여 포맷을 변경할 수도 있다.
 	
-* TTF(True Type Font) : 일반 문서작업에 적합합니다.( 웹작업 )
-* OTF(Open Type font) : 그래픽 디자인 출력에 적합합니다.
+
 
 -----
 <div style="text-align: right"> <a href="#top">⬆ back to top</a> </div>
