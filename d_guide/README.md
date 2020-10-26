@@ -22,7 +22,7 @@
 
     }
     /* 모바일 */
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 767px) {
 
     }
 
