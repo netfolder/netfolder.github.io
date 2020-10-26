@@ -6,11 +6,11 @@
 
 
 ``` CSS
-
+    /* 테블릿 */
     @media screen and (max-width: 1024px) {
 
     }
-
+    /* 모바일 */
     @media screen and (max-width: 720px) {
 
     }
