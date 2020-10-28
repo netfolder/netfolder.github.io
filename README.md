@@ -23,8 +23,7 @@
 * checkbox btn custom [【↓】](#checkbox)
 * css3 effect flip [【↓】](#flip)
 * 소스창고
-	- drag float menu[(보기)](https://netfolder.github.io/drag/sample.html); 메뉴 위치에따라 열리는 위치가 바뀜
-
+	- drag float menu[(보기)](https://netfolder.github.io/drag/sample.html) ,  drag float menu2[(보기)](https://netfolder.github.io/drag/drag.html); 메뉴 위치에따라 열리는 위치가 바뀜
 -----
 
 
