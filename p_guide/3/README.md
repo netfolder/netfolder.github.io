@@ -16,5 +16,6 @@
  | | +-- html
  | | | +-- list.html
  | | +-- images
+ | | | +-- icons ( build/images/sprite/sprite.png ( sprite.css ) )
  | | +-- js
 ```
