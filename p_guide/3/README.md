@@ -26,8 +26,7 @@
 ## 1. Node.js 설치
 gulp를 사용하기 위해서 node.js 를 다운로드 받기
 
-* https://nodejs.org      
-<-   v10.16.3 버전 설치 
+* https://nodejs.org  ( v10.16.3 버전 설치 )
 
 
 node와 npm이 제대로 설치되었는지 확인
