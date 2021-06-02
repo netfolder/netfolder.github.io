@@ -5,17 +5,16 @@
 
 #### Project 구조
 
-
+`
  +-- project
  | +-- build ( 결과물 ) 
  | +-- node_modules
  | +-- dev ( 작업폴더)
  | | +-- _include 
- 
  | | +-- _scss
  | | +-- font
  | | +-- html
  | | | +-- list.html
  | | +-- images
  | | +-- js
-
+`
