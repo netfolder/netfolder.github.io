@@ -5,7 +5,7 @@
 
 #### Project 구조
 
-`
+```html
  +-- project
  | +-- build ( 결과물 ) 
  | +-- node_modules
@@ -17,4 +17,4 @@
  | | | +-- list.html
  | | +-- images
  | | +-- js
-`
+```
