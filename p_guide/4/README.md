@@ -466,4 +466,4 @@ section.tweet > header.tweet__header { ... }
 
 ### License <a id="license" href="#license">#</a>
 
-Released under MIT by, and copyright 2014, @mdo and @lezhin
+Released under MIT by, and copyright 2014
