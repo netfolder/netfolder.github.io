@@ -1,6 +1,6 @@
 
 [ < 뒤로](https://github.com/netfolder/netfolder.github.io/tree/master/p_guide)
-## 기본 파일구조와 경로
+## 구조 및 셋팅
 
 
 #### Project 구조
