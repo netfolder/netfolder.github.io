@@ -1,0 +1,24 @@
+﻿
+@charset "utf-8";
+@import url("reset.css");
+
+
+/* 접근성을위한 대체 텍스트 제공 */
+.ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
+
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display:block;content:'';line-height:0;}
+.clearfix:after {clear:both;}
+
+/* 버튼 눌림현상 제거 */
+button,
+button:focus,
+button:active{padding: 0; cursor:pointer; display:block; background:none; outline:none;}
+button span{position:relative;} 
+
+/* 사파리 위에 선 생기는것 */
+input, button, textarea {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+/* select 세모 없애기 */
+select { -webkit-appearance:none; -moz-appearance:none; appearance:none; }

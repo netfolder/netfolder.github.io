@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="공작소">
+    <meta name="description" content="공부작당소모임에서 영어내신대비하고 상품권 받자">
+    <meta name="keywords" content="공작소,공부작당소모임">
+    <meta name="robots" content="all">
+    <meta name="language" content="Korean">
+    <meta name="author" content="NE능률">
+
+	<!-- 오픈그래프(open graph) -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="" /> <!-- 이벤트 타이틀 -->
+	<meta property="og:description" content="" /> <!-- 설명 -->
+	<meta property="og:image" content="" /> <!-- sns공유시 링크 전달시 보여지는 이미지 -->
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:url" content="" /> <!-- URL -->
+	<!-- // 오픈그래프(open graph) -->
+
+    <link rel="stylesheet" href="include/css/common.css">
+
+	<title>공작소</title>
+
+    <style>
+        /* 0 ~ 599 */
+        img{width:100%;}
+        #wrap{}
+        .inner{width:100%;}
+        .contents{}
+        .event01{background-color: #0a6ddf;}
+        .event02{background-color: #ebf5f8;}
+        .event03{background-color: #ffffff;}
+        .event04{background-color: #ebf5f8;}
+        .event05{background-color: #0a6ddf;}
+
+
+        /* 600 ~  */
+        @media all and (min-width:600px) { 
+            
+            .inner{width:600px; margin:0 auto}
+
+        }
+    </style>
+
+
+
+</head>
+<body>
+	<!-- 
+        <<요청사항>>
+
+        1. min-width 360~ 599 까진 image 100%
+        600 이상은 이미지 가운데 놓고 배경색 깔아주세요 (이미지의 max-width: 600px)
+
+        2. 섹션1 구역
+        혼자하면 작심3일 하단(폰 뒤)에서 현위치로 (이징 효과)
+        함께하면 작심 100일 하단(폰 뒤)에서 현위치로 (이징 효과)
+
+        3. 저 이미지상 교재별 권장학습 플랜제공
+        이부분은 원래 6개의 책 리스트인데
+        마우스 over & click 시 저 책 레이어로 뜸
+        마우스 leave & 닫기 클릭시 저 책 레이어로 닫힘
+
+        4. 하단에 600 이상~ QR 노출
+        599 이하 현재 처럼 버튼 2개
+    -->
+
+    <div id="wrap">
+        <div class="contents event01">
+            <div class="inner">
+                <img src="include/images/01.jpg" alt="">
+            </div>
+        </div>
+        <div class="contents event02">
+            <div class="inner">
+                <img src="include/images/02.jpg" alt="">
+            </div>
+        </div>
+        <div class="contents event03">
+            <div class="inner">
+                <img src="include/images/03.jpg" alt="">
+            </div>
+        </div>
+        <div class="contents event04">
+            <div class="inner">
+                <img src="include/images/04.jpg" alt="">
+            </div>
+        </div>
+        <div class="contents event05">
+            <div class="inner">
+                <img src="include/images/05.jpg" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="include/js/jquery.js"></script>
+    <script>
+        $(function(){
+           
+        })
+    </script>
+</body>
+</html>
